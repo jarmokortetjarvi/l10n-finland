@@ -20,7 +20,7 @@ class Business_industry(osv.Model):
         if not context:
             context = {}
         if name:
-            ids = self.search(cr, uid, [('name', operator, name),('code', operator, name)] + args, limit=limit, context=context)
+            ids = self.search(cr, uid, ['|',('name', operator, name),('code', operator, name)] + args, limit=limit, context=context)
         else:
             ids = self.search(cr, uid, args, limit=limit, context=context)
         return self.name_get(cr, uid, ids, context)
