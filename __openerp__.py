@@ -15,14 +15,13 @@
 {
     'name': 'Finnish industry classification',
     'category': 'CRM',
-    'version': '0.1',
+    'version': '0.2',
     'author': 'Vizucom Oy',
     'website': 'http://www.vizucom.com',    
     'depends': ['crm'],
     'description': '''
 - Adds the finnish industry classification hierarchy
 - Allows partner to have an industry
-- TODO: category hierarcy, industry categories
 ''',
     'data': [
         'data/industry_class.xml',
