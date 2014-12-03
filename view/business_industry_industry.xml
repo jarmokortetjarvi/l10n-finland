@@ -30,5 +30,17 @@
              </field>
          </record>
 
+        <!-- Search view -->
+        <record id="view_business_industry_industry_search" model="ir.ui.view">
+            <field name="name">business.industry.industry.search</field>
+            <field name="model">business_industry.industry</field>
+            <field name="arch" type="xml">
+                <search string="Search Industries">
+                    <field name="name" string="Name" filter_domain="['|', ('name','ilike',self), ('code', 'ilike', self)]" help="Search by name or code"/>
+                    <field name="category" string="Category" filter_domain="['|', ('category.name','ilike',self), ('category.code', 'ilike', self)]" help="Search category by name or code"/>
+	            </search>
+            </field>
+        </record>
+
     </data>
 </openerp>

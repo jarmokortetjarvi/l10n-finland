@@ -24,6 +24,7 @@
 		     <field name="type">ir.actions.act_window</field>
 		     <field name="res_model">business_industry.industry</field>
 		     <field name="view_type">form</field>
+		     <field name="search_view_id" ref="view_business_industry_industry_search"/>
 		     <field name="help">Click to create a new business industry.</field>
 		 </record>
 	
