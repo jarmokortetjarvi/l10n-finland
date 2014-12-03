@@ -9,8 +9,8 @@
              <field name="arch" type="xml">
                  <form string="Industry classes">
                      <group col="1">
-                         <field name="code"/>
-                         <field name="name"/>
+                         <field name="code" required="1"/>
+                         <field name="name" required="1"/>
                      </group>
                  </form>
              </field>

@@ -9,9 +9,9 @@
              <field name="arch" type="xml">
                  <form string="Business industries">
                      <group col="2">
-                         <field name="code"/>
-                         <field name="name"/>
-                         <field name="category"/>
+                         <field name="code" required="1"/>
+                         <field name="name" required="1"/>
+                         <field name="category" required="1"/>
                      </group>
                  </form>
              </field>
@@ -24,7 +24,8 @@
              <field name="arch" type="xml">
                  <tree toolbar="1" string="Business industries">
                      <field name="code"/>
-                     <field name="name"/>
+                     <field name="display_name"/>
+                     <field name="category"/>
                  </tree>
              </field>
          </record>
