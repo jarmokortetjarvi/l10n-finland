@@ -1,2 +1,4 @@
-import business_industry
+import industry_industry
+import industry_category
+import industry_class
 import res_partner
