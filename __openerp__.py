@@ -32,6 +32,6 @@
         'view/business_industry_category.xml',
         'view/business_industry_industry.xml',
         'view/industry_menu.xml',
-        #'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
     ],
 }

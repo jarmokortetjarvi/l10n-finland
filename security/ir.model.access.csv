@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+"business_industry_industry_perm","business_industry_industry_perm","model_business_industry_industry","base.group_user",1,1,1,1
+"business_industry_category_perm","business_industry_category_perm","model_business_industry_category","base.group_user",1,1,1,1
+"business_industry_class_perm","business_industry_class_perm","model_business_industry_class","base.group_user",1,1,1,1
