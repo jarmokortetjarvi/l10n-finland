@@ -18,13 +18,18 @@
     'version': '0.1',
     'author': 'Oy Tawasta Technologies Ltd.',
     'website': 'http://www.tawasta.fi',    
-    'depends': ['account_payment'],
+    'depends': ['account'],
     'description': '''
 Account Payment Terms Finnish
 ==================
 
-Adds Finnish payment terms
+A bundle for adding Finnish payment terms
 
+Features
+========
+
+Adds Finnish payment terms
+Adds a sequence to payment terms for ordering
 
 Payment terms
 ========
@@ -37,9 +42,8 @@ Payment terms
 * 45 days
 * 60 days
 * 90 days
-
 ''',
     'data': [
-
+        'data/payment_terms_finnish.xml'
     ],
 }

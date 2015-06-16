@@ -1,8 +1,13 @@
 Account Payment Terms Finnish
 ==================
 
-Adds Finnish payment terms
+A bundle for adding Finnish payment terms
 
+Features
+========
+
+Adds Finnish payment terms
+Adds a sequence to payment terms for ordering
 
 Payment terms
 ========
