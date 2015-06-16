@@ -44,6 +44,6 @@ Payment terms
 * 90 days
 ''',
     'data': [
-        'data/payment_terms_finnish.xml'
+        'data/payment_terms_finnish.xml',
     ],
 }
