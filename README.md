@@ -3,11 +3,13 @@ Account Payment Terms Finnish
 
 A bundle for adding Finnish payment terms
 
+
 Features
 ========
 
 Adds Finnish payment terms
 Adds a sequence to payment terms for ordering
+Adds and unique code to terms for easier searching
 
 Payment terms
 ========

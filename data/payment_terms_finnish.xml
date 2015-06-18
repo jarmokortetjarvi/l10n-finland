@@ -16,6 +16,7 @@
         <!-- Immediate payment -->
         <record id="account_payment_term_immediate" model="account.payment.term">
             <field name="name">Immediate Payment</field>
+            <field name="code">immediate</field>
             <field name="note">Immediate Payment</field>
             <field name="sequence">1</field>
         </record>
@@ -30,6 +31,7 @@
         <!-- 7 Days -->
         <record id="account_payment_term_7_days" model="account.payment.term">
             <field name="name">7 Days</field>
+            <field name="code">7_days</field>
             <field name="note">7 Days</field>
             <field name="sequence">2</field>
         </record>
@@ -44,6 +46,7 @@
         <!-- 10 Days -->
         <record id="account_payment_term_10_days" model="account.payment.term">
             <field name="name">10 Days</field>
+            <field name="code">10_days</field>
             <field name="note">10 Days</field>
             <field name="sequence">3</field>
         </record>
@@ -58,6 +61,7 @@
         <!-- 14 Days -->
         <record id="account_payment_term_14_days" model="account.payment.term">
             <field name="name">14 Days</field>
+            <field name="code">14_days</field>
             <field name="note">14 Days</field>
             <field name="sequence">4</field>
         </record>
@@ -72,6 +76,7 @@
         <!-- 21 Days -->
         <record id="account_payment_term_21_days" model="account.payment.term">
             <field name="name">21 Days</field>
+            <field name="code">21_days</field>
             <field name="note">21 Days</field>
             <field name="sequence">5</field>
         </record>
@@ -86,6 +91,7 @@
         <!-- 30 Days -->
         <record id="account_payment_term_30_days" model="account.payment.term">
             <field name="name">30 Days</field>
+            <field name="code">30_days</field>
             <field name="note">30 Days</field>
             <field name="sequence">6</field>
         </record>
@@ -100,6 +106,7 @@
         <!-- 45 Days -->
         <record id="account_payment_term_45_days" model="account.payment.term">
             <field name="name">45 Days</field>
+            <field name="code">45_days</field>
             <field name="note">45 Days</field>
             <field name="sequence">7</field>
         </record>
@@ -114,6 +121,7 @@
         <!-- 60 Days -->
         <record id="account_payment_term_60_days" model="account.payment.term">
             <field name="name">60 Days</field>
+            <field name="code">60_days</field>
             <field name="note">60 Days</field>
             <field name="sequence">8</field>
         </record>
@@ -128,6 +136,7 @@
         <!-- 90 Days -->
         <record id="account_payment_term_90_days" model="account.payment.term">
             <field name="name">90 Days</field>
+            <field name="code">90_days</field>
             <field name="note">90 Days</field>
             <field name="sequence">9</field>
         </record>

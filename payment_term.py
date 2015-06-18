@@ -7,3 +7,4 @@ class PaymentTerm(models.Model):
     _order = 'sequence, name'
     
     sequence = fields.Integer('Sequence')
+    code = fields.Char('Unique code')
