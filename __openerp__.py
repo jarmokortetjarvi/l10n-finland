@@ -18,7 +18,7 @@
     'version': '0.1',
     'author': 'Oy Tawasta Technologies Ltd',
     'website': 'http://www.tawasta.fi',
-    'depends': ['crm'],
+    'depends': ['crm', 'account_payment_term_finnish'],
     'description': '''
 * Default values for CRM models
 ''',
