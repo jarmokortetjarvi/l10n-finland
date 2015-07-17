@@ -14,18 +14,14 @@ class ResPartner(models.Model):
     # property_supplier_payment_term = fields.Many2one(default=lambda self:\
     # self.env['account.payment.term'].search([('name', '=', '14 Days')]))
 
-    @api.onchange('lang')
-    def lang_onchange(self):
-        ''' We are updating these with lang onchange
-        (because its always set on create),
-        as the preceding field defaults (commented out)
-        aren't working for some reason '''
+    @api.model
+    def default_get(self, fields):
+        res = super(ResPartner, self).default_get(fields)
 
-        if not self.property_payment_term:
-            self.property_payment_term = self.env['account.payment.term'].\
-                search([('code', '=', '14_days')])
+        payment_term = self.env['account.payment.term'].\
+            search([('code', '=', '14_days')]).id
 
-        if not self.property_supplier_payment_term:
-            self.property_supplier_payment_term =\
-                self.env['account.payment.term'].\
-                search([('code', '=', '14_days')])
+        res['property_payment_term'] = payment_term
+        res['property_supplier_payment_term'] = payment_term
+
+        return res
