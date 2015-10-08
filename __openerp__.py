@@ -22,11 +22,10 @@
 {
     'name': 'Finnish industry classification',
     'category': 'CRM',
-    'version': '8.0.0.2.1',
+    'version': '8.0.0.2.2',
     'author': '''
 Vizucom Oy,
-Oy Tawasta OS Technologies Ltd.,
-Odoo Community Association (OCA)
+Oy Tawasta OS Technologies Ltd.
 ''',
     'license': 'AGPL-3',
     'website': 'http://www.vizucom.com',
