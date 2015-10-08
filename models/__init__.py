@@ -1,4 +1,4 @@
-from models import industry_industry
-from models import industry_category
-from models import industry_class
-from models import res_partner
+import industry_industry
+import industry_category
+import industry_class
+import res_partner
