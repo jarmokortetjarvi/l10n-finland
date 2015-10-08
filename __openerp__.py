@@ -22,7 +22,7 @@
 {
     'name': 'Finnish industry classification',
     'category': 'CRM',
-    'version': '8.0.0.2.2',
+    'version': '8.0.0.2.3',
     'author': '''
 Vizucom Oy,
 Oy Tawasta OS Technologies Ltd.
@@ -32,19 +32,17 @@ Oy Tawasta OS Technologies Ltd.
     'depends': [
         'crm'
     ],
-    'description': '''
-- Adds the finnish industry classification hierarchy
-- Allows partner to have an industry
-''',
     'data': [
         'data/industry_class.xml',
         'data/industry_category.xml',
         'data/industry_industry.xml',
+
         'view/res_partner.xml',
         'view/business_industry_class.xml',
         'view/business_industry_category.xml',
         'view/business_industry_industry.xml',
         'view/industry_menu.xml',
+
         'security/ir.model.access.csv',
     ],
 }
