@@ -22,7 +22,7 @@
 {
     'name': 'Finnish Account Income Statement',
     'summary': 'Module summary',
-    'version': '8.0.0.2.0',
+    'version': '8.0.0.3.0',
     'category': 'Account',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -30,8 +30,11 @@
     'application': False,
     'installable': True,
     'depends': [
+        'account',
     ],
     'data': [
+        'views/account_financial_report.xml',
+        
         'data/init.xml',
     ],
     'demo': [

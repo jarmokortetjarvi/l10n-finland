@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_account_financial_report_form" model="ir.ui.view">
+            <field name="name">Account Financial Report Form Company</field>
+            <field name="model">account.financial.report</field>
+            <field name="inherit_id" ref="account.view_account_financial_report_form" />
+            <field name="arch" type="xml">
+                
+                <field name='sequence' position='after'>
+                    <field name='company' />
+                </field>
+
+            </field>
+        </record> 
+
+    </data>
+</openerp>
