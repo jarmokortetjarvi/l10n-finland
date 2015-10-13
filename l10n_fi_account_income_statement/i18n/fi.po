@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_fi_account_income_statement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-13 14:32+0000\n"
+"PO-Revision-Date: 2015-10-13 17:34+0200\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.7.5\n"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.model,name:l10n_fi_account_income_statement.model_account_financial_report
+msgid "Account Report"
+msgstr "Tiliraportti"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.actions.act_window,name:l10n_fi_account_income_statement.action_account_external_income_statement
+#: model:ir.ui.menu,name:l10n_fi_account_income_statement.menu_account_external_income_statement
+msgid "External Income Statement"
+msgstr "Ulkoinen Tuloslaskelma"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.ui.menu,name:l10n_fi_account_income_statement.accounting_reports_finnish
+msgid "Finnish Accounting Reports"
+msgstr "Suomalaiset kirjanpitoraportit"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.actions.act_window,name:l10n_fi_account_income_statement.action_account_internal_income_statement
+#: model:ir.ui.menu,name:l10n_fi_account_income_statement.menu_account_internal_income_statement
+msgid "Internal Income Statement"
+msgstr "Sisäinen Tuloslaskelma"
+
+#. module: l10n_fi_account_income_statement
+#: field:account.financial.report,code:0
+msgid "Unique code"
+msgstr "Uniikki koodi"
+
+#. module: l10n_fi_account_income_statement
+#: view:accounting.report:l10n_fi_account_income_statement.accounting_report_view_internal_income_statement
+msgid "[('code','=','STU')]"
+msgstr "[('code','=','STU')]"
+
+#. module: l10n_fi_account_income_statement
+#: view:accounting.report:l10n_fi_account_income_statement.accounting_report_view_external_income_statement
+msgid "[('code','=','UTU')]"
+msgstr "[('code','=','UTU')]"
