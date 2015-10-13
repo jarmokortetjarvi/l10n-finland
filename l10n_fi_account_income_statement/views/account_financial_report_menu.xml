@@ -8,7 +8,7 @@
              <field name="type">ir.actions.act_window</field>
              <field name="view_type">form</field>
              <field name="view_mode">form</field>
-             <field name="view_id" ref="account.accounting_report_view"/>
+             <field name="view_id" ref="accounting_report_view_internal_income_statement"/>
              <field name="target">new</field>
         </record>
         
@@ -18,19 +18,23 @@
              <field name="type">ir.actions.act_window</field>
              <field name="view_type">form</field>
              <field name="view_mode">form</field>
-             <field name="view_id" ref="account.accounting_report_view"/>
+             <field name="view_id" ref="accounting_report_view_external_income_statement"/>
              <field name="target">new</field>
         </record>
+        
+        <menuitem name="Finnish Accounting Reports"
+            parent="account.menu_finance_legal_statement"
+            id="accounting_reports_finnish" />
         
         <menuitem name="Internal Income Statement" 
             action="action_account_internal_income_statement"
             id="menu_account_internal_income_statement"
-            parent="account.final_accounting_reports" />
+            parent="accounting_reports_finnish" />
             
         <menuitem name="External Income Statement" 
             action="action_account_external_income_statement"
             id="menu_account_external_income_statement"
-            parent="account.final_accounting_reports" />
+            parent="accounting_reports_finnish" />
         
     </data>
 </openerp>
