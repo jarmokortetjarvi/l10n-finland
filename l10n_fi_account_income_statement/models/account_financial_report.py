@@ -66,15 +66,39 @@ class AccountFinancialReport(models.Model):
         internal_statement_report = self.create({
             'company': company.id,
             'code': 'STU',
-            'name': 'Sisäinen Tuloslaskelma (%s)' % company.name
+            'name': 'Sisäinen Tuloslaskelma'
         })
         
         # Turnover
+        account = self.env['account.account'].search([
+            ('company_id', '=', company.id),
+            ('code', 'in', ['TUMT'])
+        ])
+
         self.create({
             'company': company.id,
-            'code': 'STUMT',
+            'code': 'STUT',
             'name': 'Liikevaihto',
             'type': 'accounts',
+            'sequence': '10',
             'display_detail': 'detail_with_hierarchy',
             'parent_id': internal_statement_report.id,
+            'account_ids': [(6, 0, account.ids)]
+        })
+        
+        # Expenses
+        account = self.env['account.account'].search([
+            ('company_id', '=', company.id),
+            ('code', 'in', ['TUHK', 'TUMP', 'TUPA', 'TULK', 'TURR'])
+        ])
+
+        self.create({
+            'company': company.id,
+            'code': 'STUE',
+            'name': 'Kulut',
+            'type': 'accounts',
+            'sequence': '20',
+            'display_detail': 'detail_with_hierarchy',
+            'parent_id': internal_statement_report.id,
+            'account_ids': [(6, 0, account.ids)]
         })
