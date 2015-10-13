@@ -13,7 +13,20 @@
                 </field>
 
             </field>
-        </record> 
+        </record>
+        
+        <record id="view_account_financial_report_tree" model="ir.ui.view">
+            <field name="name">Account Financial Report Tree Company</field>
+            <field name="model">account.financial.report</field>
+            <field name="inherit_id" ref="account.view_account_financial_report_tree" />
+            <field name="arch" type="xml">
+                
+                <field name='type' position='after'>
+                    <field name='company' />
+                </field>
+
+            </field>
+        </record>
 
     </data>
 </openerp>

@@ -21,19 +21,14 @@ from openerp import api, fields, models
 
 class AccountFinancialReport(models.Model):
     
-    # Variable names:
-    # Use underscore lowercase notation for common variable (snake_case)
-    # since new API works with record or recordset instead of id list, 
-    # don't suffix variable name with _id or _ids if they do not contain 
-    # an id or a list of ids.
-   
     # Constants:
     # Use underscore uppercase notation for global variables or constants.
 
     # 1. Private attributes
-    _name = 'account.financial.report'
+    _inherit = 'account.financial.report'
 
     # 2. Fields declaration
+    code = fields.Char('Unique code')
     company = fields.Many2one('res.company', 'Company')
 
     # 3. Default methods
@@ -47,13 +42,39 @@ class AccountFinancialReport(models.Model):
     # 7. Action methods
 
     # 8. Business methods
-    ''' When module is installed, fetch all companies and create income statements '''
+    ''' When the module is installed,
+    fetch all companies and create income statements '''
+    @api.model
     def _init_income_statement_reports(self):
-        
-        companies = self.company.search()
+        companies = self.company.search([])
         
         for company in companies:
-            print company.name
-        
-        return True
+            self._delete_internal_income_statement_report(company)
+            self._create_internal_income_statement_report(company)
     
+    def _delete_internal_income_statement_report(self, company):
+        reports = self.search([
+            ('company', '=', company.id),
+            '|', 
+            ('code','=','STU'),
+            ('parent_id.code','=','STU')
+        ])
+        reports.unlink()
+    
+    def _create_internal_income_statement_report(self, company):
+        # The report header
+        internal_statement_report = self.create({
+            'company': company.id,
+            'code': 'STU',
+            'name': 'Sisäinen Tuloslaskelma (%s)' % company.name
+        })
+        
+        # Turnover
+        self.create({
+            'company': company.id,
+            'code': 'STUMT',
+            'name': 'Liikevaihto',
+            'type': 'accounts',
+            'display_detail': 'detail_with_hierarchy',
+            'parent_id': internal_statement_report.id,
+        })
