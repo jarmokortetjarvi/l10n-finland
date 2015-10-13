@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <record id="action_account_internal_income_statement" model="ir.actions.act_window">
+             <field name="name">Internal Income Statement</field>
+             <field name="res_model">accounting.report</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+             <field name="view_mode">form</field>
+             <field name="view_id" ref="account.accounting_report_view"/>
+             <field name="target">new</field>
+        </record>
+        
+        <record id="action_account_external_income_statement" model="ir.actions.act_window">
+             <field name="name">External Income Statement</field>
+             <field name="res_model">accounting.report</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+             <field name="view_mode">form</field>
+             <field name="view_id" ref="account.accounting_report_view"/>
+             <field name="target">new</field>
+        </record>
+        
+        <menuitem name="Internal Income Statement" 
+            action="action_account_internal_income_statement"
+            id="menu_account_internal_income_statement"
+            parent="account.final_accounting_reports" />
+            
+        <menuitem name="External Income Statement" 
+            action="action_account_external_income_statement"
+            id="menu_account_external_income_statement"
+            parent="account.final_accounting_reports" />
+        
+    </data>
+</openerp>
