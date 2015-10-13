@@ -58,101 +58,172 @@ class AccountFinancialReport(models.Model):
     def _delete_internal_income_statement_report(self, company):
         reports = self.search([
             ('company', '=', company.id),
-            '|', 
+            '|', '|',
             ('code','=','STU'),
-            ('parent_id.code','=','STU')
+            ('parent_id.code','=','STU'),
+            ('parent_id.parent_id.code','=','STU')
         ])
+        
+        # Remote related accounting reports
+        self.env['accounting.report'].search([
+            ('account_report_id', 'in', reports.ids)
+        ]).unlink()
+        
         reports.unlink()
         
     def _delete_external_income_statement_report(self, company):
         reports = self.search([
             ('company', '=', company.id),
-            '|', 
+            '|', '|',
             ('code','=','UTU'),
-            ('parent_id.code','=','UTU')
+            ('parent_id.code','=','UTU'),
+            ('parent_id.parent_id.code','=','UTU')
         ])
+        
+        # Remote related accounting reports
+        self.env['accounting.report'].search([
+            ('account_report_id', 'in', reports.ids)
+        ]).unlink()
+        
         reports.unlink()
     
     def _create_internal_income_statement_report(self, company):
         # The report header
-        internal_statement_report = self.create({
+        report_header = self.create({
             'company': company.id,
             'code': 'STU',
             'name': 'Sisäinen Tuloslaskelma'
         })
         
-        # Turnover
-        account = self.env['account.account'].search([
+        ## Turnover
+        report_turnover = self.create({
+            'company': company.id,
+            'code': 'STUT',
+            'name': 'Liikevaihto',
+            'type': 'sum',
+            'sequence': '10',
+            'display_detail': 'detail_flat',
+            'sign': -1,
+            'parent_id': report_header.id,
+        })
+        
+        ### Sales
+        accounts = self.env['account.account'].search([
             ('company_id', '=', company.id),
             ('code', 'in', ['TUMT'])
         ])
 
-        self.create({
+        for account in accounts:
+            self.create({
+                'company': company.id,
+                'code': 'S%s' % account.code,
+                'name': account.name,
+                'type': 'accounts',
+                'sequence': '10',
+                'display_detail': 'detail_with_hierarchy',
+                'sign': -1,
+                'parent_id': report_turnover.id,
+                'account_ids': [(6, 0, account.ids)]
+            })
+        
+        ## Expenses
+        report_expenses = self.create({
             'company': company.id,
-            'code': 'STUT',
-            'name': 'Liikevaihto',
-            'type': 'accounts',
-            'sequence': '10',
-            'display_detail': 'detail_with_hierarchy',
-            'parent_id': internal_statement_report.id,
-            'account_ids': [(6, 0, account.ids)]
+            'code': 'UTUE',
+            'name': 'Kulut',
+            'type': 'sum',
+            'sequence': '100',
+            'display_detail': 'detail_flat',
+            'sign': -1,
+            'parent_id': report_header.id,
         })
         
-        # Expenses
-        account = self.env['account.account'].search([
+        ### Employee expenses
+        accounts = self.env['account.account'].search([
             ('company_id', '=', company.id),
             ('code', 'in', ['TUHK', 'TUMP', 'TUPA', 'TULK', 'TURR'])
         ])
 
-        self.create({
-            'company': company.id,
-            'code': 'STUE',
-            'name': 'Kulut',
-            'type': 'accounts',
-            'sequence': '20',
-            'display_detail': 'detail_with_hierarchy',
-            'parent_id': internal_statement_report.id,
-            'account_ids': [(6, 0, account.ids)]
-        })
+        for account in accounts:
+            self.create({
+                'company': company.id,
+                'code': 'U%s' % account.code,
+                'name': account.name,
+                'type': 'accounts',
+                'sequence': '110',
+                'display_detail': 'detail_with_hierarchy',
+                'sign': -1,
+                'parent_id': report_expenses.id,
+                'account_ids': [(6, 0, account.ids)]
+            })
+
         
     def _create_external_income_statement_report(self, company):
         # The report header
-        internal_statement_report = self.create({
+        report_header = self.create({
             'company': company.id,
             'code': 'UTU',
             'name': 'Ulkoinen Tuloslaskelma'
         })
         
-        # Turnover
-        account = self.env['account.account'].search([
+        ## Turnover
+        report_turnover = self.create({
+            'company': company.id,
+            'code': 'UTUT',
+            'name': 'Liikevaihto',
+            'type': 'sum',
+            'sequence': '10',
+            'display_detail': 'detail_flat',
+            'sign': -1,
+            'parent_id': report_header.id,
+        })
+        
+        ### Sales
+        accounts = self.env['account.account'].search([
             ('company_id', '=', company.id),
             ('code', 'in', ['TUMT'])
         ])
 
-        self.create({
+        for account in accounts:
+            self.create({
+                'company': company.id,
+                'code': 'U%s' % account.code,
+                'name': account.name,
+                'type': 'accounts',
+                'sequence': '10',
+                'display_detail': 'detail_flat',
+                'sign': -1,
+                'parent_id': report_turnover.id,
+                'account_ids': [(6, 0, account.ids)]
+            })
+        
+        ## Expenses
+        report_expenses = self.create({
             'company': company.id,
-            'code': 'STUT',
-            'name': 'Liikevaihto',
-            'type': 'accounts',
-            'sequence': '10',
+            'code': 'UTUE',
+            'name': 'Kulut',
+            'type': 'sum',
+            'sequence': '100',
             'display_detail': 'detail_flat',
-            'parent_id': internal_statement_report.id,
-            'account_ids': [(6, 0, account.ids)]
+            'sign': -1,
+            'parent_id': report_header.id,
         })
         
-        # Expenses
-        account = self.env['account.account'].search([
+        ### Employee expenses
+        accounts = self.env['account.account'].search([
             ('company_id', '=', company.id),
             ('code', 'in', ['TUHK', 'TUMP', 'TUPA', 'TULK', 'TURR'])
         ])
 
-        self.create({
-            'company': company.id,
-            'code': 'STUE',
-            'name': 'Kulut',
-            'type': 'accounts',
-            'sequence': '20',
-            'display_detail': 'detail_flat',
-            'parent_id': internal_statement_report.id,
-            'account_ids': [(6, 0, account.ids)]
-        })
+        for account in accounts:
+            self.create({
+                'company': company.id,
+                'code': 'U%s' % account.code,
+                'name': account.name,
+                'type': 'accounts',
+                'sequence': '110',
+                'display_detail': 'detail_flat',
+                'sign': -1,
+                'parent_id': report_expenses.id,
+                'account_ids': [(6, 0, account.ids)]
+            })
