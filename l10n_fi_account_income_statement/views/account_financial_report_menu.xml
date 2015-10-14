@@ -24,17 +24,20 @@
         
         <menuitem name="Finnish Accounting Reports"
             parent="account.menu_finance_legal_statement"
-            id="accounting_reports_finnish" />
+            id="accounting_reports_finnish"
+            groups="account.group_account_user,account.group_account_manager" />
         
         <menuitem name="Internal Income Statement" 
             action="action_account_internal_income_statement"
             id="menu_account_internal_income_statement"
-            parent="accounting_reports_finnish" />
+            parent="accounting_reports_finnish" 
+            groups="account.group_account_user,account.group_account_manager" />
             
         <menuitem name="External Income Statement" 
             action="action_account_external_income_statement"
             id="menu_account_external_income_statement"
-            parent="accounting_reports_finnish" />
+            parent="accounting_reports_finnish" 
+            groups="account.group_account_user,account.group_account_manager" />
         
     </data>
 </openerp>
