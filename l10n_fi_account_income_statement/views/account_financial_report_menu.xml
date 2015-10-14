@@ -23,7 +23,7 @@
         </record>
         
         <menuitem name="Finnish Accounting Reports"
-            parent="account.menu_finance_legal_statement"
+            parent="account.menu_finance_reports"
             id="accounting_reports_finnish"
             groups="account.group_account_user,account.group_account_manager" />
         
