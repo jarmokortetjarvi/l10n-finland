@@ -18,13 +18,6 @@ Installation
 
 Install the module form Settings->Local Modules
 
-Suggested modules to install:
-
-* web_export_view (https://apps.openerp.com/apps/modules/8.0/web_export_view/)
-* web_groupby_expand (https://apps.openerp.com/apps/modules/8.0/web_groupby_expand/)
-
-**These are not required**, but they improve reports usability.
-
 Configuration
 =============
 \-

@@ -21,7 +21,7 @@
 
 {
     'name': 'Finnish Account Ledger',
-    'version': '8.0.0.1.0',
+    'version': '8.0.0.1.1',
     'category': 'Account',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -30,6 +30,9 @@
     'installable': True,
     'depends': [
         'account',
+        'web_group_expand',
+        'web_export_view',
+        'l10n_fi_account_income_statement',
     ],
     'data': [
         'views/account_move_line_tree_ledger.xml',
