@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+		<!-- Actions -->
+        <record id="action_account_moves_all_journal" model="ir.actions.act_window">
+            <field name="name">General Journal</field>
+            <field name="res_model">account.move.line</field>
+            <field name="view_id" ref="account_move_line_tree_ledger"/>
+            <field name="view_mode">tree,form</field>
+            
+            <!--<field name="view_mode">tree_account_move_line_quickadd_period,form</field>-->
+            <!-- <field name="search_view_id" ref="account_move_line_search_ledger"/> -->
+            <!-- <field name="context">{"search_default_groupby_account": 1}</field> -->
+        </record>
+        
+        <record id="action_account_moves_all_ledger" model="ir.actions.act_window">
+            <field name="name">General Ledger</field>
+            <field name="res_model">account.move.line</field>
+            <field name="view_id" ref="account_move_line_tree_ledger"/>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_groupby_account": 1}</field>
+        </record>
+         
+	 	<menuitem id="menu_accounting_reports" name="Accounting reports" parent="account.menu_finance" 
+	 		sequence="12" 
+	 		groups="account.group_account_user,account.group_account_manager"/>
+	    
+       	<menuitem
+            action="action_account_moves_all_ledger"
+            id="menu_action_account_moves_all_ledger"
+            parent="menu_accounting_reports"
+            sequence="10"
+            groups="account.group_account_user"
+        />
+        
+       	<menuitem
+            action="action_account_moves_all_journal"
+            id="menu_action_account_moves_all_journal"
+            parent="menu_accounting_reports"
+            sequence="20"
+            groups="account.group_account_user"
+        />
+	    
+    </data>
+</openerp>
