@@ -6,7 +6,7 @@
 			<field name="priority" eval="20" />
 			
 			<field name="arch" type="xml">
-                <tree string="Ledger"
+                <tree string="General Ledger"
                     colors="red:state == 'draft';black:state == 'valid'" 
                     default_order="account_order, date desc, id desc">
                     <field name="account_order" invisible='1'/>
