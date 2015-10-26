@@ -21,7 +21,7 @@
 
 {
     'name': 'Finnish Account Income Statement',
-    'version': '8.0.0.8.8',
+    'version': '8.0.0.8.9',
     'category': 'Account',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

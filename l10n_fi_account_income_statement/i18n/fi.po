@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-13 14:32+0000\n"
-"PO-Revision-Date: 2015-10-13 17:34+0200\n"
+"POT-Creation-Date: 2015-10-26 14:46+0000\n"
+"PO-Revision-Date: 2015-10-26 16:46+0200\n"
 "Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,11 +29,6 @@ msgid "External Income Statement"
 msgstr "Ulkoinen Tuloslaskelma"
 
 #. module: l10n_fi_account_income_statement
-#: model:ir.ui.menu,name:l10n_fi_account_income_statement.accounting_reports_finnish
-msgid "Finnish Accounting Reports"
-msgstr "Suomalaiset kirjanpitoraportit"
-
-#. module: l10n_fi_account_income_statement
 #: model:ir.actions.act_window,name:l10n_fi_account_income_statement.action_account_internal_income_statement
 #: model:ir.ui.menu,name:l10n_fi_account_income_statement.menu_account_internal_income_statement
 msgid "Internal Income Statement"
@@ -45,11 +40,7 @@ msgid "Unique code"
 msgstr "Uniikki koodi"
 
 #. module: l10n_fi_account_income_statement
-#: view:accounting.report:l10n_fi_account_income_statement.accounting_report_view_internal_income_statement
-msgid "[('code','=','STU')]"
-msgstr "[('code','=','STU')]"
-
-#. module: l10n_fi_account_income_statement
 #: view:accounting.report:l10n_fi_account_income_statement.accounting_report_view_external_income_statement
-msgid "[('code','=','UTU')]"
-msgstr "[('code','=','UTU')]"
+#: view:accounting.report:l10n_fi_account_income_statement.accounting_report_view_internal_income_statement
+msgid "[('code','in',('STU','UTU'))]"
+msgstr "[('code','in',('STU','UTU'))]"
