@@ -21,7 +21,7 @@
 
 {
     'name': 'Finnish Accounting Menu',
-    'version': '8.0.0.1.0',
+    'version': '8.0.0.1.1',
     'category': 'Account',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
