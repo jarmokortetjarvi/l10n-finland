@@ -34,7 +34,7 @@
             <field name="inherit_id" ref="account.accounting_report_view"/>
             <field name="arch" type="xml">
                 <field name='account_report_id' position='attributes'> 
-                    <attribute name='domain'>[('code','=','STU')]</attribute>
+                    <attribute name='domain'>[('code','in',('STU','UTU'))]</attribute>
                 </field>
             </field>
         </record>
@@ -45,7 +45,7 @@
             <field name="inherit_id" ref="account.accounting_report_view"/>
             <field name="arch" type="xml">
                 <field name='account_report_id' position='attributes'> 
-                    <attribute name='domain'>[('code','=','UTU')]</attribute>
+                    <attribute name='domain'>[('code','in',('STU','UTU'))]</attribute>
                 </field>
             </field>
         </record>
