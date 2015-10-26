@@ -1,18 +1,18 @@
 <openerp>
     <data>
-        <record id="account_move_line_tree_ledger" model="ir.ui.view">
-			<field name="name">Account move line ledger tree</field>
+        <record id="account_move_line_tree_journal" model="ir.ui.view">
+			<field name="name">Account move line journal tree</field>
 			<field name="model">account.move.line</field>
 			<field name="priority" eval="20" />
 			
 			<field name="arch" type="xml">
-                <tree string="Ledger"
+                <tree string="Journal"
                     colors="red:state == 'draft';black:state == 'valid'" 
-                    default_order="account_order, date desc, id desc">
+                    default_order="date desc, account_order, id desc">
                     <field name="account_order" invisible='1'/>
                     
-                    <field name="account_id" />
                     <field name="date"/>
+                    <field name="account_id" />
 
                     <field name="name"/>
                     <field name="ref"/>
