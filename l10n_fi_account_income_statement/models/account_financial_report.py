@@ -42,10 +42,11 @@ class AccountFinancialReport(models.Model):
     # 7. Action methods
 
     # 8. Business methods
-    ''' When the module is installed,
-    fetch all companies and create income statements '''
+
     @api.model
     def _init_income_statement_reports(self):
+        ''' When the module is installed,
+        fetch all companies and create income statements '''
         companies = self.company.search([])
         
         for company in companies:
@@ -54,7 +55,10 @@ class AccountFinancialReport(models.Model):
             
             self._delete_external_income_statement_report(company)
             self._create_external_income_statement_report(company)
-    
+            
+            self._delete_balance_sheet_report(company)
+            self._create_balance_sheet_report(company)
+     
     def _delete_internal_income_statement_report(self, company):
         reports = self.search([
             ('company', '=', company.id),
@@ -70,7 +74,7 @@ class AccountFinancialReport(models.Model):
         ]).unlink()
         
         reports.unlink()
-        
+
     def _delete_external_income_statement_report(self, company):
         reports = self.search([
             ('company', '=', company.id),
@@ -86,78 +90,42 @@ class AccountFinancialReport(models.Model):
         ]).unlink()
         
         reports.unlink()
-    
+        
+    def _delete_balance_sheet_report(self, company):
+        reports = self.search([
+            ('company', '=', company.id),
+            '|', '|',
+            ('code','=','TASE'),
+            ('parent_id.code','=','TASE'),
+            ('parent_id.parent_id.code','=','TASE')
+        ])
+        
+        # Remote related accounting reports
+        self.env['accounting.report'].search([
+            ('account_report_id', 'in', reports.ids)
+        ]).unlink()
+        
+        reports.unlink()
+     
+    ## CREATE METHODS
+        
     def _create_internal_income_statement_report(self, company):
-        # The report header
-        report_header = self.create({
+        account = self.env['account.account'].search([
+            ('company_id', '=', company.id),
+            ('code', 'in', ['TULOS'])
+        ])
+
+        self.create({
             'company': company.id,
             'code': 'STU',
-            'name': 'Sisäinen Tuloslaskelma'
-        })
-        
-        ## Turnover
-        report_turnover = self.create({
-            'company': company.id,
-            'code': 'STUT',
-            'name': 'Liikevaihto',
-            'type': 'sum',
+            'name': 'Sisäinen Tuloslaskelma',
+            'type': 'accounts',
             'sequence': '10',
-            'display_detail': 'detail_flat',
+            'display_detail': 'detail_with_hierarchy',
             'sign': -1,
-            'parent_id': report_header.id,
+            'account_ids': [(6, 0, account.ids)]
         })
-        
-        ### Sales
-        accounts = self.env['account.account'].search([
-            ('company_id', '=', company.id),
-            ('code', 'in', ['TUMT'])
-        ])
 
-        for account in accounts:
-            self.create({
-                'company': company.id,
-                'code': 'S%s' % account.code,
-                'name': account.name,
-                'type': 'accounts',
-                'sequence': '10',
-                'display_detail': 'detail_with_hierarchy',
-                'sign': -1,
-                'parent_id': report_turnover.id,
-                'account_ids': [(6, 0, account.ids)]
-            })
-        
-        ## Expenses
-        report_expenses = self.create({
-            'company': company.id,
-            'code': 'UTUE',
-            'name': 'Kulut',
-            'type': 'sum',
-            'sequence': '100',
-            'display_detail': 'detail_flat',
-            'sign': -1,
-            'parent_id': report_header.id,
-        })
-        
-        ### Employee expenses
-        accounts = self.env['account.account'].search([
-            ('company_id', '=', company.id),
-            ('code', 'in', ['TUHK', 'TUMP', 'TUPA', 'TULK', 'TURR'])
-        ])
-
-        for account in accounts:
-            self.create({
-                'company': company.id,
-                'code': 'U%s' % account.code,
-                'name': account.name,
-                'type': 'accounts',
-                'sequence': '110',
-                'display_detail': 'detail_with_hierarchy',
-                'sign': -1,
-                'parent_id': report_expenses.id,
-                'account_ids': [(6, 0, account.ids)]
-            })
-
-        
     def _create_external_income_statement_report(self, company):
         # The report header
         report_header = self.create({
@@ -209,7 +177,6 @@ class AccountFinancialReport(models.Model):
             'parent_id': report_header.id,
         })
         
-        ### Employee expenses
         accounts = self.env['account.account'].search([
             ('company_id', '=', company.id),
             ('code', 'in', ['TUHK', 'TUMP', 'TUPA', 'TULK', 'TURR'])
@@ -227,3 +194,20 @@ class AccountFinancialReport(models.Model):
                 'parent_id': report_expenses.id,
                 'account_ids': [(6, 0, account.ids)]
             })
+            
+    def _create_balance_sheet_report(self, company):
+        account = self.env['account.account'].search([
+            ('company_id', '=', company.id),
+            ('code', 'in', ['TAVV', 'TAVT'])
+        ])
+        
+        ## ASSETS AND LIABILITIES
+        report_header = self.create({
+            'company': company.id,
+            'code': 'TASE',
+            'name': 'Tase',
+            'type': 'accounts',
+            'sequence': '10',
+            'display_detail': 'detail_with_hierarchy',
+            'account_ids': [(6, 0, account.ids)]
+        })

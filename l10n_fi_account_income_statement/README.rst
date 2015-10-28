@@ -25,8 +25,6 @@ Known issues / Roadmap
 ======================
 \-
 
-Bug Tracker
-
 Credits
 =======
 
