@@ -25,7 +25,7 @@
             action="action_account_moves_all_ledger"
             id="menu_action_account_moves_all_ledger"
             parent="l10n_fi_account_menu.accounting_reports_finnish"
-            sequence="10"
+            sequence="110"
             groups="account.group_account_user"
         />
         
@@ -33,7 +33,7 @@
             action="action_account_moves_all_journal"
             id="menu_action_account_moves_all_journal"
             parent="l10n_fi_account_menu.accounting_reports_finnish"
-            sequence="20"
+            sequence="120"
             groups="account.group_account_user"
         />
 	    
