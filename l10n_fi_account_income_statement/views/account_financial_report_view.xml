@@ -28,19 +28,8 @@
             </field>
         </record>
 
-        <record id="accounting_report_view_internal_income_statement" model="ir.ui.view">
-            <field name="name">Accounting Report Internal Income Statement</field>
-            <field name="model">accounting.report</field>
-            <field name="inherit_id" ref="account.accounting_report_view"/>
-            <field name="arch" type="xml">
-                <field name='account_report_id' position='attributes'> 
-                    <attribute name='domain'>[('code','in',('STU','UTU','TASE'))]</attribute>
-                </field>
-            </field>
-        </record>
-        
-        <record id="accounting_report_view_external_income_statement" model="ir.ui.view">
-            <field name="name">Accounting Report External Income Statement</field>
+        <record id="accounting_report_view" model="ir.ui.view">
+            <field name="name">Accounting Report View</field>
             <field name="model">accounting.report</field>
             <field name="inherit_id" ref="account.accounting_report_view"/>
             <field name="arch" type="xml">
