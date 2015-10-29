@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-26 14:46+0000\n"
-"PO-Revision-Date: 2015-10-26 16:46+0200\n"
+"POT-Creation-Date: 2015-10-29 10:29+0000\n"
+"PO-Revision-Date: 2015-10-29 12:31+0200\n"
 "Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,16 +23,27 @@ msgid "Account Report"
 msgstr "Tiliraportti"
 
 #. module: l10n_fi_account_income_statement
+#: model:ir.model,name:l10n_fi_account_income_statement.model_accounting_report
+msgid "Accounting Report"
+msgstr "Tiliraportti"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.actions.act_window,name:l10n_fi_account_income_statement.action_account_balance_sheet
+#: model:ir.ui.menu,name:l10n_fi_account_income_statement.menu_account_balance_sheet
+msgid "Balance Sheet"
+msgstr "Tase"
+
+#. module: l10n_fi_account_income_statement
 #: model:ir.actions.act_window,name:l10n_fi_account_income_statement.action_account_external_income_statement
 #: model:ir.ui.menu,name:l10n_fi_account_income_statement.menu_account_external_income_statement
 msgid "External Income Statement"
-msgstr "Ulkoinen Tuloslaskelma"
+msgstr "Ulkoinen tuloslaskelma"
 
 #. module: l10n_fi_account_income_statement
 #: model:ir.actions.act_window,name:l10n_fi_account_income_statement.action_account_internal_income_statement
 #: model:ir.ui.menu,name:l10n_fi_account_income_statement.menu_account_internal_income_statement
 msgid "Internal Income Statement"
-msgstr "Sisäinen Tuloslaskelma"
+msgstr "Sisäinen tuloslaskelma"
 
 #. module: l10n_fi_account_income_statement
 #: field:account.financial.report,code:0
@@ -40,7 +51,6 @@ msgid "Unique code"
 msgstr "Uniikki koodi"
 
 #. module: l10n_fi_account_income_statement
-#: view:accounting.report:l10n_fi_account_income_statement.accounting_report_view_external_income_statement
-#: view:accounting.report:l10n_fi_account_income_statement.accounting_report_view_internal_income_statement
-msgid "[('code','in',('STU','UTU'))]"
-msgstr "[('code','in',('STU','UTU'))]"
+#: view:accounting.report:l10n_fi_account_income_statement.accounting_report_view
+msgid "[('code','in',('STU','UTU','TASE'))]"
+msgstr "[('code','in',('STU','UTU','TASE'))]"
