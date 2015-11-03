@@ -19,7 +19,7 @@
                     <field name="statement_id" invisible="1"/>
                     <field name="partner_id" />
                         
-                    <field name="analytic_account_id" />
+                    <field name="move_id" />
                     
                     <field name="debit" sum="Total Debit"/>
                     <field name="credit" sum="Total Credit"/>
