@@ -31,6 +31,8 @@ class AccountMoveLine(models.Model):
         store=True
     )
 
+    # 3. Default methods
+
     # 4. Compute and search fields, in the same order that fields declaration
     @api.depends('account_id')
     def _get_account_order(self):

@@ -35,6 +35,6 @@ class AccountingReport(models.TransientModel):
                 ('code', '=', self._context['report_code'])
             ])
         
-        res['account_report_id'] = report.id
+            res['account_report_id'] = report.id
 
         return res
