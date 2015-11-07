@@ -20,15 +20,15 @@
 #
 ##############################################################################
 {
-    'name': 'Finnish industry classification',
+    'name': 'Finnish Industry Classification',
     'category': 'CRM',
-    'version': '8.0.0.2.7',
+    'version': '8.0.0.2.9',
     'author': '''
-Vizucom Oy,
-Oy Tawasta OS Technologies Ltd.
+Oy Tawasta OS Technologies Ltd.,
+Vizucom Oy
 ''',
     'license': 'AGPL-3',
-    'website': 'http://www.vizucom.com',
+    'website': 'http://www.tawasta.fi',
     'depends': [
         'crm'
     ],
