@@ -22,7 +22,7 @@
 {
     'name': 'Finnish Industry Classification',
     'category': 'CRM',
-    'version': '8.0.0.2.9',
+    'version': '8.0.0.2.10',
     'author': '''
 Oy Tawasta OS Technologies Ltd.,
 Vizucom Oy
