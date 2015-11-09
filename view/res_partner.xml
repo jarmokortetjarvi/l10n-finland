@@ -9,8 +9,15 @@
 
                 <field name="email" position="after">
 	                <field name="business_industry_class"/>
-	                <field name="business_industry_category" invisible="1" required="0" on_change="onchange_industry_category(business_industry_category, context)"/>
-	                <field name="business_industry_industry" required="0" on_change="onchange_industry_industry(business_industry_industry, context)"/>
+	                <field name="business_industry_category"
+                       invisible="1" required="0"
+                       on_change="onchange_industry_category(business_industry_category, context)"
+                       domain="[('industry_class', '=', business_industry_class)]"
+                    />
+	                <field name="business_industry_industry"
+                       required="0"
+                       on_change="onchange_industry_industry(business_industry_industry, context)"
+	                />
                 </field>
 
             </field>
