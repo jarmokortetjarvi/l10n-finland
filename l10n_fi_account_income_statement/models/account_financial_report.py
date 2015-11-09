@@ -134,6 +134,17 @@ class AccountFinancialReport(models.Model):
             'name': 'Ulkoinen Tuloslaskelma'
         })
         
+        ## Profit / Loss
+        report_profit = self.create({
+            'company': company.id,
+            'code': 'UTULOS',
+            'name': 'Tulos',
+            'type': 'sum',
+            'sequence': '10',
+            'sign': -1,
+            'parent_id': report_header.id,
+        })
+        
         ## Turnover
         report_turnover = self.create({
             'company': company.id,
@@ -143,7 +154,7 @@ class AccountFinancialReport(models.Model):
             'sequence': '10',
             'display_detail': 'detail_flat',
             'sign': -1,
-            'parent_id': report_header.id,
+            'parent_id': report_profit.id,
         })
         
         ### Sales
@@ -174,7 +185,7 @@ class AccountFinancialReport(models.Model):
             'sequence': '100',
             'display_detail': 'detail_flat',
             'sign': -1,
-            'parent_id': report_header.id,
+            'parent_id': report_profit.id,
         })
         
         accounts = self.env['account.account'].search([
