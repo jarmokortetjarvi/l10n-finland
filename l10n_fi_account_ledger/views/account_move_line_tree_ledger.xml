@@ -8,8 +8,9 @@
 			<field name="arch" type="xml">
                 <tree string="General Ledger"
                     colors="red:state == 'draft';black:state == 'valid'" 
-                    default_order="account_order, date desc, id desc">
+                    default_order="account_code, date desc, id desc">
                     <field name="account_order" invisible='1'/>
+                    <field name="account_code" invisible='1'/>
                     
                     <field name="account_id" />
                     <field name="date"/>

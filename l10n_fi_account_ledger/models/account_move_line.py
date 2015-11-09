@@ -30,6 +30,11 @@ class AccountMoveLine(models.Model):
         compute='_get_account_order',
         store=True
     )
+    account_code = fields.Char(
+        'Account code',
+        compute='_get_account_code',
+        store=True
+    )
 
     # 3. Default methods
 
@@ -38,6 +43,11 @@ class AccountMoveLine(models.Model):
     def _get_account_order(self):
         for record in self:
             record.account_order = record.account_id.parent_left
+            
+    @api.depends('account_id')
+    def _get_account_code(self):
+        for record in self:
+            record.account_code = record.account_id.code
 
     # 5. Constraints and onchanges
 

@@ -10,8 +10,10 @@ Generic account ledger and journal.
 
 Features
 ========
-* Adds a generic account journal report
-* Adds a generic account ledger report, that groups account transactions by account
+* Adds a generic account journal report,
+that lists account moves by date
+* Adds a generic account ledger report,
+that lists account moves by account
 
 Installation
 ============
