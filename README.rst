@@ -3,11 +3,13 @@
    :alt: License: AGPL-3
 
 ===============================
-Finnish industry classification
+Finnish Industry Classification
 ===============================
 
 Adds the finnish industry classification hierarchy
 Allows partner to have an industry
+
+Based on the "Tilastokeskus Toimialaluokitus 2008" (http://www.stat.fi/meta/luokitukset/toimiala/001-2008/index.html)
 
 Installation
 ============
@@ -25,8 +27,6 @@ Usage
 Known issues / Roadmap
 ======================
 \-
-
-Bug Tracker
 
 Credits
 =======
