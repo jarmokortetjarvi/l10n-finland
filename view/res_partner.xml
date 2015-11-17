@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
 
                 <page name="internal_notes" position="inside">
-                    <group string="Industry" cols="4">
+                    <group>
                         <div name="industry_class">
                             <group>
                                 <field name="business_industry_class"
@@ -20,16 +20,14 @@
                                        invisible="1"
                                        required="0"
                                        on_change="onchange_industry_category(business_industry_category, context)"/>
-                            </group>
-                        </div>
-
-                        <div name="industry_industry">
-                            <group>
                                 <field name="business_industry_industry"
                                        options='{"no_create": True, "no_open": True}'
                                        required="0"
                                        on_change="onchange_industry_industry(business_industry_industry, context)"/>
                             </group>
+                        </div>
+                        <div>
+
                         </div>
                     </group>
                 </page>
