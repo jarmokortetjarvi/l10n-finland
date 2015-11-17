@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
 
                 <page name="internal_notes" position="inside">
-                    <group>
+                    <group attrs="{'invisible': [('is_company','=',False)]}">
                         <div name="industry_class">
                             <group>
                                 <field name="business_industry_class"
