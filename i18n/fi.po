@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-07 05:31+0000\n"
-"PO-Revision-Date: 2015-11-07 07:41+0200\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2015-11-17 09:39+0000\n"
+"PO-Revision-Date: 2015-11-17 11:39+0200\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,7 +59,7 @@ msgstr "Alaroolit"
 #. module: crm_industry_classification_finnish
 #: field:business_industry.class,code:0
 msgid "Class code"
-msgstr "Luokkakoodi\t"
+msgstr "Luokkakoodit"
 
 #. module: crm_industry_classification_finnish
 #: field:business_industry.class,name:0
@@ -105,6 +105,11 @@ msgstr "Virhe! Et voi luoda rekursiivisia kategorioita."
 #: field:business_industry.industry,id:0
 msgid "ID"
 msgstr "ID"
+
+#. module: crm_industry_classification_finnish
+#: view:res.partner:crm_industry_classification_finnish.res_partner_business_industry
+msgid "Industry"
+msgstr "Toimiala"
 
 #. module: crm_industry_classification_finnish
 #: model:ir.actions.act_window,name:crm_industry_classification_finnish.action_business_industry_category
