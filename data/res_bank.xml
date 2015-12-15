@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- Finnish banks -->
+
+        <!-- Disable the Reserve-account -->
+        <!-- We could also delete this, but there is always a chance
+          someone modified this to be an actual account -->
+        <record id="base.res_bank_1" model="res.bank">
+            <field name="active" eval="0" />
+        </record>
+
+        <!-- Please maintain the alphabetical order when doing additions -->
+
+        <!-- Aktia -->
+        <record id="res_bank_HELSFIHH" model="res.bank">
+            <field name="name">Aktia</field>
+            <field name="bic">HELSFIHH</field>
+        </record>
+
+        <!-- Citibank -->
+        <record id="res_bank_CITIFIHX" model="res.bank">
+            <field name="name">Citibank</field>
+            <field name="bic">CITIFIHX</field>
+        </record>
+
+        <!-- Danske Bank -->
+        <record id="res_bank_DABAFIHH" model="res.bank">
+            <field name="name">Danske Bank</field>
+            <field name="bic">DABAFIHH</field>
+        </record>
+
+        <!-- Handelsbanken -->
+        <record id="res_bank_HANDFIHH" model="res.bank">
+            <field name="name">Handelsbanken</field>
+            <field name="bic">HANDFIHH</field>
+        </record>
+
+        <!-- Nordea -->
+        <record id="res_bank_NDEAFIHH" model="res.bank">
+            <field name="name">Nordea</field>
+            <field name="bic">NDEAFIHH</field>
+        </record>
+
+        <!-- Osuuspankki -->
+        <record id="res_bank_OKOYFIHH" model="res.bank">
+            <field name="name">Osuuspankki (OP)</field>
+            <field name="bic">OKOYFIHH</field>
+        </record>
+
+        <!-- POP Pankki -->
+        <record id="res_bank_POPFFI22" model="res.bank">
+            <field name="name">POP Pankki</field>
+            <field name="bic">POPFFI22</field>
+        </record>
+
+        <!-- S-Pankki -->
+        <record id="res_bank_SBANFIHH" model="res.bank">
+            <field name="name">S-Pankki</field>
+            <field name="bic">SBANFIHH</field>
+        </record>
+
+        <!-- Skandinaviska Enskilda Banken -->
+        <record id="res_bank_SEBESSEFIHX" model="res.bank">
+            <field name="name">Skandinaviska Enskilda Banken (SEB)</field>
+            <field name="bic">SEBESSEFIHX</field>
+        </record>
+
+        <!-- Swedbank -->
+        <record id="res_bank_SWEDFIHH" model="res.bank">
+            <field name="name">Swedbank</field>
+            <field name="bic">SWEDFIHH</field>
+        </record>
+
+        <!-- Säästöpankki -->
+        <record id="res_bank_ITELFIHH" model="res.bank">
+            <field name="name">Säästöpankki (SP)</field>
+            <field name="bic">ITELFIHH</field>
+        </record>
+
+        <!-- Ålandsbanken -->
+        <record id="res_bank_AABAFI22" model="res.bank">
+            <field name="name">Ålandsbanken</field>
+            <field name="bic">AABAFI22</field>
+        </record>
+
+    </data>
+</openerp>
