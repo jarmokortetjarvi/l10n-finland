@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <!-- Finnish administrative product categories -->
+        <!-- Please maintain the alphabetical order when doing additions -->
+
+        <!-- TODO: internal references? -->
+
+        <!-- Harjoittelutuki -->
+        <record id="product_category_administrative" model="product.category">
+            <field name="name">Hallinnolliset</field>
+            <field name="parent_id" ref="product.product_category_all" />
+        </record>
+
+<!--
+Harjoittelutuki
+Hotelliyöpyminen alv 24%
+Kilometrikorvaus alv 24%
+Kokopäiväraha alv 24%
+Laskutuslisä
+Maksukehotusmaksu
+Matkakustannukset alv 24%
+Osapäiväraha alv 24%
+Palvelumaksuproduct_template.xml
+Provisio
+Viivästyskorko 8,5%
+Yhteistyölaskutus
+-->
+
+    </data>
+</openerp>
