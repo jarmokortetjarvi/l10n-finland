@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <!-- Finnish authority products -->
+        <!-- Please maintain the alphabetical order when doing additions -->
+
+        <!-- TODO: internal references? -->
+        <!-- TODO: accounts -->
+        <!-- TODO: taxes -->
+
+        <!-- Ammattikirjallisuus -->
+        <record id="product_template_ammattikirjallisuus" model="product.template">
+            <field name="name">Ammattikirjallisuus</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- ATK-tarvikkeiden pienhankinnat -->
+        <record id="product_template_atk_tarvikkeiden_pienhankinnat" model="product.template">
+            <field name="name">ATK-tarvikkeiden pienhankinnat</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Auton huolto ja korjaus -->
+        <record id="product_template_auton_huolto_ja_korjaus" model="product.template">
+            <field name="name">Auton huolto ja korjaus</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Autotarvikkeet 24% -->
+        <record id="product_template_autotarvikkeet_24" model="product.template">
+            <field name="name">Autotarvikkeet 24%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Edustuskulut -->
+        <record id="product_template_edustuskulut" model="product.template">
+            <field name="name">Edustuskulut</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Edustuslahjat asiakkaille 10% -->
+        <record id="product_template_edustuslahjat_asiakkaille_10" model="product.template">
+            <field name="name">Edustuslahjat asiakkaille 10%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Edustuslahjat asiakkaille 14% -->
+        <record id="product_template_edustuslahjat_asiakkaille_14" model="product.template">
+            <field name="name">Edustuslahjat asiakkaille 14%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Edustuslahjat asiakkaille 24% -->
+        <record id="product_template_edustuslahjat_asiakkaille_24" model="product.template">
+            <field name="name">Edustuslahjat asiakkaille 24%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Internet-kulut 24% -->
+        <record id="product_template_internetkulut_24" model="product.template">
+            <field name="name">Internet-kulut 24%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Kahvitarvikkeet 14% -->
+        <record id="product_template_kahvitarvikkeet_14" model="product.template">
+            <field name="name">Kahvitarvikkeet 14%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Kahvitarvikkeet 24% -->
+        <record id="product_template_kahvitarvikkeet_24" model="product.template">
+            <field name="name">Kahvitarvikkeet 24%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Kalusto 24% -->
+        <record id="product_template_kalusto_24" model="product.template">
+            <field name="name">Kalusto 24%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Käytetyt kalusteet 0% -->
+        <record id="product_template_kaytetyt_kalusteet_0" model="product.template">
+            <field name="name">Käytetyt kalusteet 0%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Kilometrikorvaus 2015 -->
+        <record id="product_template_kilometrikorvaus_2015" model="product.template">
+            <field name="name">Kilometrikorvaus 2015</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Kilometrikorvaus omistajat -->
+        <record id="product_template_kilometrikorvaus_omistajat" model="product.template">
+            <field name="name">Kilometrikorvaus omistajat</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Km-korvauksen korotus + 1 henk. -->
+        <record id="product_template_kilometrikorvauksen_korotus_1" model="product.template">
+            <field name="name">Km-korvauksen korotus + 1 henk.</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Km-korvauksen korotus, peräkärry -->
+        <record id="product_template_kilometrikorvauksen_korotus_perakarry" model="product.template">
+            <field name="name">Km-korvauksen korotus, peräkärry</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Kotimaan osapäiväraha 6-10 h (2015) -->
+        <record id="product_template_kotimaan_osapaivaraha_2015" model="product.template">
+            <field name="name">Kotimaan osapäiväraha 6-10 h (2015)</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Kotimaan päiväraha (2015) -->
+        <record id="product_template_kotimaan_paivaraha_2015" model="product.template">
+            <field name="name">Kotimaan päiväraha (2015)</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Lahja henkilökunnalle -->
+        <record id="product_template_lahja_henkilokunnalle" model="product.template">
+            <field name="name">Lahja henkilökunnalle</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Mainostarvikkeet -->
+        <record id="product_template_mainostarvikkeet" model="product.template">
+            <field name="name">Mainostarvikkeet</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Majoitus 10% -->
+        <record id="product_template_majoitus_10" model="product.template">
+            <field name="name">Majoitus 10%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Majoitus ulkomaat -->
+        <record id="product_template_majoitus_ulkomaat" model="product.template">
+            <field name="name">Majoitus ulkomaat</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Matkaliput 0% -->
+        <record id="product_template_matkaliput_0" model="product.template">
+            <field name="name">Matkaliput 0%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Matkaliput 10% -->
+        <record id="product_template_matkaliput_10" model="product.template">
+            <field name="name">Matkaliput 10%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Neuvottelukulut 0% -->
+        <record id="product_template_neuvottelukulut_0" model="product.template">
+            <field name="name">Neuvottelukulut 0%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Neuvottelukulut 14% -->
+        <record id="product_template_neuvottelukulut_14" model="product.template">
+            <field name="name">Neuvottelukulut 14%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Neuvottelukulut 24% -->
+        <record id="product_template_neuvottelukulut_24" model="product.template">
+            <field name="name">Neuvottelukulut 24%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Paikoituskulut 0% -->
+        <record id="product_template_paikoituskulut_0" model="product.template">
+            <field name="name">Paikoituskulut 0%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Paikoituskulut 24% -->
+        <record id="product_template_paikoituskulut_24" model="product.template">
+            <field name="name">Paikoituskulut 24%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Polttoaine -->
+        <record id="product_template_polttoaine" model="product.template">
+            <field name="name">Polttoaine</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Postikulut 0% -->
+        <record id="product_template_postikulut_0" model="product.template">
+            <field name="name">Postikulut 0%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Postikulut 24% -->
+        <record id="product_template_postikulut_24" model="product.template">
+            <field name="name">Postikulut 24%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Puhelinkulu 24% -->
+        <record id="product_template_puhelinkulu_24" model="product.template">
+            <field name="name">Puhelinkulu 24%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Sisäisen palaverin kulut -->
+        <record id="product_template_sisaisen_palaverin_kulut" model="product.template">
+            <field name="name">Sisäisen palaverin kulut</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Taksikulut 0% -->
+        <record id="product_template_taksikulut_0" model="product.template">
+            <field name="name">Taksikulut 0%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Taksikulut 10% -->
+        <record id="product_template_taksikulut_10" model="product.template">
+            <field name="name">Taksikulut 10%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Tapahtumat ulkomaat -->
+        <record id="product_template_tapahtumat_ulkomaat" model="product.template">
+            <field name="name">Tapahtumat ulkomaat</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Toimiluvat/rekisteröinnit 0% -->
+        <record id="product_template_toimiluvat_rekisteroinnit_0" model="product.template">
+            <field name="name">Toimiluvat/rekisteröinnit 0%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Toimistotarvikkeet 24% -->
+        <record id="product_template_toimistotarvikkeet_24" model="product.template">
+            <field name="name">Toimistotarvikkeet 24%</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Toimituskulut 0%, Eu-maasta -->
+        <record id="product_template_toimistokulut_0" model="product.template">
+            <field name="name">Toimituskulut 0%, Eu-maasta</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Ulkomaanpäiväraha Iso-Britannia 2015 -->
+        <record id="product_template_ulkomaanpaivaraha_iso_britannia_2015" model="product.template">
+            <field name="name">Ulkomaanpäiväraha Iso-Britannia 2015</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Ulkomaanpäiväraha Norja 2015 -->
+        <record id="product_template_ulkomaanpaivaraha_norja_2015" model="product.template">
+            <field name="name">Ulkomaanpäiväraha Norja 2015</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Ulkomaanpäiväraha Ruotsi 2015 -->
+        <record id="product_template_ulkomaanpaivaraha_ruotsi_2015" model="product.template">
+            <field name="name">Ulkomaanpäiväraha Ruotsi 2015</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+        <!-- Ulkomaanpäiväraha Viro 2015 -->
+        <record id="product_template_ulkomaanpaivaraha_viro_2015" model="product.template">
+            <field name="name">Ulkomaanpäiväraha Viro 2015</field>
+            <field name="type">consu</field>
+            <field name="lst_price">0</field>
+            <field name="categ_id" ref="product_category_authority" />
+            <field name="sale_ok" eval="0" />
+            <field name="hr_expense_ok" eval="1" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+    </data>
+</openerp>
