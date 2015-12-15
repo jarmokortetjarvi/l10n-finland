@@ -110,7 +110,7 @@
             <field name="name">Palvelumaksu</field>
             <field name="type">consu</field>
             <field name="categ_id" ref="product_category_administrative" />
-
+Harjoittelutuki
             <field name="property_account_income" ref="" />
             <field name="property_account_expense" ref="" />
             <field name="taxes_id" ref="" />
