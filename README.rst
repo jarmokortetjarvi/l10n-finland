@@ -6,7 +6,7 @@
 Finnish Banks
 =============
 
-Adds finnish banks
+Adds Finnish banks
 
 Installation
 ============
