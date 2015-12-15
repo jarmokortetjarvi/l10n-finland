@@ -4,6 +4,9 @@
 
         <!-- Finnish banks -->
 
+        <!-- TODO: Add main branch address information -->
+        <!-- TODO: Add branches? -->
+
         <!-- Disable the Reserve-account -->
         <!-- We could also delete this, but there is always a chance
           someone modified this to be an actual account -->
