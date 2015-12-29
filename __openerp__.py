@@ -21,7 +21,7 @@
 
 {
     'name': 'Finnish Authority Products',
-    'version': '8.0.0.2.1',
+    'version': '8.0.0.2.2',
     'category': 'Localization',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -29,11 +29,14 @@
     'application': False,
     'installable': True,
     'depends': [
+        'account',
         'product',
         'hr_expense',
     ],
     'data': [
         'data/product_category.xml',
         'data/product_template.xml',
+
+        'data/init.xml',
     ],
 }
