@@ -14,10 +14,10 @@ from openerp import api, fields, models
 # 6. Unknown third party imports:
 
 
-class ProductProduct(models.Model):
+class ProductTemplate(models.Model):
 
     # 1. Private attributes
-    _inherit = 'product.product'
+    _inherit = 'product.template'
 
     # 2. Fields declaration
 
@@ -37,5 +37,24 @@ class ProductProduct(models.Model):
         # Get all products in the category
         products = self.search([('categ_id.name', '=', 'Viranomaistuotteet')])
 
+        tax_purchase_0 = self._search_tax('Osto ALV 0%')
+        tax_purchase_14 = self._search_tax('Osto ALV 14%')
+        tax_purchase_24 = self._search_tax('Osto ALV 24%')
+
         for product in products:
-            pass
+            external_id_dict = product.get_external_id()
+
+            if product.id in external_id_dict:
+                external_id = external_id_dict[product.id]
+            else:
+                continue
+
+    def _search_tax(self, name):
+        tax = self.env['account.tax'].search(
+            [
+                ('name', '=', name),
+                ('company_id', '=', self.company_id.id),
+            ],
+            limit=1)
+
+        return tax

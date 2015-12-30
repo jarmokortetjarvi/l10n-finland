@@ -2,6 +2,6 @@
 <openerp>
     <data noupdate="0">
         <!-- Set taxes for the products -->
-        <function model="product.product" name="init_taxes" />
+        <function model="product.template" name="init_taxes" />
     </data>
 </openerp>
