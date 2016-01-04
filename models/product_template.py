@@ -141,6 +141,10 @@ class ProductTemplate(models.Model):
             product.property_account_expense = self._search_account('7874', product.company_id)
             product.supplier_taxes_id = self._search_tax('tax_purchase_0', product.company_id)
 
+        elif external_id == 'l10n_fi_product_authority.product_template_kilometrikorvaus_2016':
+            product.property_account_expense = self._search_account('7874', product.company_id)
+            product.supplier_taxes_id = self._search_tax('tax_purchase_0', product.company_id)
+
         elif external_id == 'l10n_fi_product_authority.product_template_kilometrikorvauksen_korotus_1':
             product.property_account_expense = self._search_account('7874', product.company_id)
             product.supplier_taxes_id = self._search_tax('tax_purchase_0', product.company_id)
@@ -153,8 +157,14 @@ class ProductTemplate(models.Model):
         elif external_id == 'l10n_fi_product_authority.product_template_kotimaan_osapaivaraha_2015':
             product.property_account_expense = self._search_account('7884', product.company_id)
             product.supplier_taxes_id = self._search_tax('tax_purchase_0', product.company_id)
+        elif external_id == 'l10n_fi_product_authority.product_template_kotimaan_osapaivaraha_2016':
+            product.property_account_expense = self._search_account('7884', product.company_id)
+            product.supplier_taxes_id = self._search_tax('tax_purchase_0', product.company_id)
 
         elif external_id == 'l10n_fi_product_authority.product_template_kotimaan_paivaraha_2015':
+            product.property_account_expense = self._search_account('7884', product.company_id)
+            product.supplier_taxes_id = self._search_tax('tax_purchase_0', product.company_id)
+        elif external_id == 'l10n_fi_product_authority.product_template_kotimaan_paivaraha_2016':
             product.property_account_expense = self._search_account('7884', product.company_id)
             product.supplier_taxes_id = self._search_tax('tax_purchase_0', product.company_id)
 
