@@ -47,9 +47,9 @@ class ProductTemplate(models.Model):
         taxes = dict()
 
         taxes['tax_purchase_0'] = 'Osto ALV 0%'
-        taxes['tax_purchase_10'] = 'Osto ALV 10%'
-        taxes['tax_purchase_14'] = 'Osto ALV 14%'
-        taxes['tax_purchase_24'] = 'Osto ALV 24%'
+        taxes['tax_purchase_10'] = 'Osto ALV 10% (sis. hintaan)'
+        taxes['tax_purchase_14'] = 'Osto ALV 14% (sis. hintaan)'
+        taxes['tax_purchase_24'] = 'Osto ALV 24% (sis. hintaan)'
 
         return taxes
 
