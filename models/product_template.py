@@ -33,28 +33,57 @@ class ProductTemplate(models.Model):
 
     # 8. Business methods
     @api.model
-    def init_taxes(self):
+    def init_attributes(self):
+        # Get taxes
+        self.taxes = self._get_taxes()
+
         # Get all products in the category
         products = self.search([('categ_id.name', '=', 'Viranomaistuotteet')])
 
-        tax_purchase_0 = self._search_tax('Osto ALV 0%')
-        tax_purchase_14 = self._search_tax('Osto ALV 14%')
-        tax_purchase_24 = self._search_tax('Osto ALV 24%')
-
         for product in products:
-            external_id_dict = product.get_external_id()
+            self._update_product_attributes(product)
 
-            if product.id in external_id_dict:
-                external_id = external_id_dict[product.id]
-            else:
-                continue
+    def _get_taxes(self):
+        taxes = dict()
 
-    def _search_tax(self, name):
+        taxes['tax_purchase_0'] = 'Osto ALV 0%'
+        taxes['tax_purchase_14'] = 'Osto ALV 14%'
+        taxes['tax_purchase_24'] = 'Osto ALV 24%'
+
+        return taxes
+
+    def _search_tax(self, code, company):
+        name = self.taxes[code]
+
         tax = self.env['account.tax'].search(
             [
                 ('name', '=', name),
-                ('company_id', '=', self.company_id.id),
+                ('company_id', '=', company.id),
             ],
             limit=1)
 
         return tax
+
+    def _search_account(self, code, company):
+        # TODO: Should this be more strict?
+
+        account = self.env['account.account'].search(
+            [
+                ('code', 'like', code),
+                ('company_id', '=', company.id),
+            ],
+            limit=1)
+
+        return account
+
+    def _update_product_attributes(self, product):
+        external_id_dict = product.get_external_id()
+
+        if product.id in external_id_dict:
+            external_id = external_id_dict[product.id]
+        else:
+            return False
+
+        if external_id == 'l10n_fi_product_authority.product_template_ammattikirjallisuus':
+            product.property_account_expense = self._search_account('8460', product.company_id)
+            product.supplier_taxes_id = self._search_tax('tax_purchase_24', product.company_id)
