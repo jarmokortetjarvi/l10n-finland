@@ -260,20 +260,3 @@ class ProductTemplate(models.Model):
         elif external_id == 'l10n_fi_product_authority.product_template_toimistotarvikkeet_24':
             product.property_account_expense = self._search_account('8620', product.company_id)
             product.supplier_taxes_id = self._search_tax('tax_purchase_24', product.company_id)
-
-        # Ulkomaan päivärahat
-        elif external_id == 'l10n_fi_product_authority.product_template_ulkomaanpaivaraha_iso_britannia_2015':
-            product.property_account_expense = self._search_account('7894', product.company_id)
-            product.supplier_taxes_id = self._search_tax('tax_purchase_0', product.company_id)
-
-        elif external_id == 'l10n_fi_product_authority.product_template_ulkomaanpaivaraha_norja_2015':
-            product.property_account_expense = self._search_account('7894', product.company_id)
-            product.supplier_taxes_id = self._search_tax('tax_purchase_0', product.company_id)
-
-        elif external_id == 'l10n_fi_product_authority.product_template_ulkomaanpaivaraha_ruotsi_2015':
-            product.property_account_expense = self._search_account('7894', product.company_id)
-            product.supplier_taxes_id = self._search_tax('tax_purchase_0', product.company_id)
-
-        elif external_id == 'l10n_fi_product_authority.product_template_ulkomaanpaivaraha_viro_2015':
-            product.property_account_expense = self._search_account('7894', product.company_id)
-            product.supplier_taxes_id = self._search_tax('tax_purchase_0', product.company_id)
