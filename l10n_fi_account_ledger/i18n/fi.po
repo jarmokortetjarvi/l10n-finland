@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-26 14:45+0000\n"
-"PO-Revision-Date: 2015-10-26 16:45+0200\n"
+"POT-Creation-Date: 2016-01-07 15:53+0000\n"
+"PO-Revision-Date: 2016-01-07 17:54+0200\n"
 "Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,11 @@ msgstr ""
 #: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
 msgid "Account"
 msgstr "Tili"
+
+#. module: l10n_fi_account_ledger
+#: field:account.move.line,account_code:0
+msgid "Account code"
+msgstr "Tilikoodi"
 
 #. module: l10n_fi_account_ledger
 #: field:account.move.line,account_order:0
@@ -70,6 +75,11 @@ msgstr "Jakso"
 #: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
 msgid "State"
 msgstr "Tila"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
+msgid "This Year"
+msgstr "Tämä vuosi"
 
 #. module: l10n_fi_account_ledger
 #: view:account.move.line:l10n_fi_account_ledger.account_move_line_tree_journal

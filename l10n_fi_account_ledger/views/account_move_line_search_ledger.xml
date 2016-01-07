@@ -8,6 +8,10 @@
             <field name="inherit_id" ref="account.view_account_move_line_filter"/>
             <field name="arch" type="xml">
 
+                <search position="inside">
+                    <filter string="This Year" name="thisyear" domain="['|', ('date', '=', False), '&amp;',('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]" />
+                </search>
+
                 <filter string="Account" position='attributes'>
                     <attribute name='name'>groupby_account</attribute>
                 </filter>

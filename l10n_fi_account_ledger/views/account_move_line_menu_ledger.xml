@@ -8,10 +8,7 @@
             <field name="res_model">account.move.line</field>
             <field name="view_id" ref="account_move_line_tree_journal"/>
             <field name="view_mode">tree,form</field>
-            
-            <!--<field name="view_mode">tree_account_move_line_quickadd_period,form</field>-->
-            <!-- <field name="search_view_id" ref="account_move_line_search_ledger"/> -->
-            <!-- <field name="context">{"search_default_groupby_account": 1}</field> -->
+            <field name="context">{"search_default_thisyear": 1}</field>
         </record>
         
         <record id="action_account_moves_all_ledger" model="ir.actions.act_window">
@@ -19,6 +16,7 @@
             <field name="res_model">account.move.line</field>
             <field name="view_id" ref="account_move_line_tree_ledger"/>
             <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_thisyear": 1}</field>
         </record>
 	    
        	<menuitem
