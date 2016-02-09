@@ -21,7 +21,7 @@
 
 {
     'name': 'Finnish Banks',
-    'version': '8.0.0.2.0',
+    'version': '8.0.0.3.0',
     'category': 'Localization',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
