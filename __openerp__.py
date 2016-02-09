@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Author: Jarmo Kortetjärvi
+#    Author: Oy Tawasta OS Technologies Ltd.
 #    Copyright 2015 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -21,10 +21,11 @@
 
 {
     'name': 'Finnish Banks',
-    'version': '8.0.0.3.0',
+    'summary': 'Finnish banks and their addresses',
+    'version': '8.0.0.4.0',
     'category': 'Localization',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
+    'website': 'https://odoo-community.org/',
+    'author': 'Oy Tawasta Technologies Ltd., Odoo Community Association (OCA)',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,

@@ -6,7 +6,7 @@
 Finnish Banks
 =============
 
-Adds Finnish banks
+Adds most used Finnish banks and their addresses.
 
 Installation
 ============
