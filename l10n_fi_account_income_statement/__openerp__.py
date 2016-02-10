@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Author: Jarmo Kortetjärvi
+#    Author: Oy Tawasta OS Technologies Ltd.
 #    Copyright 2015 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -21,7 +21,7 @@
 
 {
     'name': 'Finnish Account Income Statement',
-    'version': '8.0.0.10.4',
+    'version': '8.0.0.10.5',
     'category': 'Account',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
