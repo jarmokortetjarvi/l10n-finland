@@ -26,6 +26,17 @@ class AccountingReport(models.TransientModel):
         domain=[('type', '=', 'normal')],
     )
 
+    filter = fields.Selection(
+        [
+            ('filter_no', 'No Filters'),
+            ('filter_date', 'Date'),
+            ('filter_period', 'Periods'),
+            ('filter_analytic', 'Analytic account'),
+        ],
+        "Filter by",
+        required=True
+    )
+
     # 3. Default methods
     @api.model
     def default_get(self, fields):

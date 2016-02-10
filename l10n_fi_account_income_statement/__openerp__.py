@@ -35,7 +35,8 @@
     'data': [
         'views/account_financial_report_view.xml',
         'views/account_financial_report_menu.xml',
-        
+        'views/account_financial_report_template.xml',
+
         'data/init.xml',
         'security/account_financial_report_security.xml',
     ],
