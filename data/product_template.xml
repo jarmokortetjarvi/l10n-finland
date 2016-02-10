@@ -191,8 +191,8 @@
         <record id="product_template_kilometrikorvaus_2016" model="product.template">
             <field name="name">Kilometrikorvaus 2016</field>
             <field name="type">consu</field>
-            <field name="lst_price" eval="0.44" />
-            <field name="standard_price" eval="0.44" />
+            <field name="lst_price" eval="0.43" />
+            <field name="standard_price" eval="0.43" />
             <field name="categ_id" ref="product_category_authority" />
             <field name="sale_ok" eval="0" />
             <field name="hr_expense_ok" eval="1" />
@@ -251,10 +251,10 @@
 
         <!-- Kotimaan osapäiväraha 6-10 h (2016) -->
         <record id="product_template_kotimaan_osapaivaraha_2016" model="product.template">
-            <field name="name">Kotimaan osapäiväraha 6-10 h (2015)</field>
+            <field name="name">Kotimaan osapäiväraha 6-10 h (2016)</field>
             <field name="type">consu</field>
-            <field name="lst_price" eval="18.00" />
-            <field name="standard_price" eval="18.00" />
+            <field name="lst_price" eval="19.00" />
+            <field name="standard_price" eval="19.00" />
             <field name="categ_id" ref="product_category_authority" />
             <field name="sale_ok" eval="0" />
             <field name="hr_expense_ok" eval="1" />
