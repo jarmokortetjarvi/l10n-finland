@@ -1,48 +1,37 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#   Copyright (c) 2015- Oy Tawasta Technologies Ltd. (http://www.tawasta.fi)
+#    Author: Oy Tawasta OS Technologies Ltd.
+#    Copyright 2015 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
 #    published by the Free Software Foundation, either version 3 of the
 #    License, or (at your option) any later version.
 #
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#    GNU Affero General Public License for more details.
+#
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
 #
 ##############################################################################
+
 {
-    'name': 'Account Payment Terms Finnish',
-    'category': 'Invoicing &amp; Payments',
-    'version': '0.1',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'website': 'http://www.tawasta.fi',    
-    'depends': ['account'],
-    'description': '''
-Account Payment Terms Finnish
-==================
-
-A bundle for adding Finnish payment terms
-
-Features
-========
-
-Adds Finnish payment terms
-Adds a sequence to payment terms for ordering
-
-Payment terms
-========
-* IMMEDIATE
-* 7 days
-* 10 days
-* 14 days
-* 21 days
-* 30 days
-* 45 days
-* 60 days
-* 90 days
-''',
+    'name': 'Finnish Payment Terms',
+    'summary': 'Common Finnish invoice payment terms',
+    'version': '8.0.0.2.0',
+    'category': 'Localization',
+    'website': 'https://odoo-community.org/',
+    'author': 'Oy Tawasta Technologies Ltd., Odoo Community Association (OCA)',
+    'license': 'AGPL-3',
+    'application': False,
+    'installable': True,
+    'depends': [
+        'account',
+    ],
     'data': [
         'data/payment_terms_finnish.xml',
     ],
