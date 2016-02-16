@@ -7,7 +7,8 @@ Finnish Invoice Payment Terms
 =============================
 
 Common Finnish invoice payment terms.
-Please note that this module will remove the default payment terms.
+
+**Please note that this module will remove the default payment terms!**
 
 * Adds a sequence to payment terms for ordering.
 * Adds and unique code to terms for easier searching
