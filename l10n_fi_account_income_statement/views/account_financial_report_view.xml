@@ -39,9 +39,16 @@
 
                 <xpath expr="//page[@string='Filters']" position="inside">
                     <group string="Analytic account" attrs="{'invisible':[('filter', '!=', 'filter_analytic')]}">
-                        <field name="analytic_account" options='{"no_open": True, "no_create": True}' />
+                        <field name="analytic_account"
+                               options='{"no_open": True, "no_create": True}'
+                               attrs="{'required':[('filter', '=', 'filter_analytic')]}" />
                     </group>
                 </xpath>
+
+                <field name="filter" position="attributes">
+                    <attribute name="on_change">1</attribute>
+                </field>
+
             </field>
         </record>
 

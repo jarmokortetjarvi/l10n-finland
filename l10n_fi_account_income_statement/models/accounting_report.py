@@ -58,6 +58,17 @@ class AccountingReport(models.TransientModel):
     # 4. Compute and search fields, in the same order that fields declaration
 
     # 5. Constraints and onchanges
+    @api.one
+    @api.onchange('filter')
+    def onchange_filter(self):
+        filter = self.filter
+        if self.filter == 'filter_analytic':
+            # Use filter_no to get default values
+            filter = 'filter_no'
+
+        res = super(AccountingReport, self).onchange_filter(filter, self.fiscalyear_id.id)
+
+        return res
 
     # 6. CRUD methods
 
