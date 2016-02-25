@@ -15,10 +15,10 @@
 {
     'name': 'CRM Defaults Finnish',
     'category': 'CRM',
-    'version': '0.1',
+    'version': '8.0.0.1.1',
     'author': 'Oy Tawasta Technologies Ltd',
     'website': 'http://www.tawasta.fi',
-    'depends': ['crm', 'account_payment_term_finnish'],
+    'depends': ['crm', 'l10n_fi_payment_terms'],
     'description': '''
 * Default values for CRM models
 ''',
