@@ -1,4 +1,4 @@
 import account_financial_report
 import accounting_report
 import account_account
-import common_report_header_analytic
+import account_move_line
