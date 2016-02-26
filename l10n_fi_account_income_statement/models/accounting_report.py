@@ -6,6 +6,7 @@
 
 # 3. Odoo imports (openerp):
 from openerp import api, fields, models
+from openerp import _
 
 # 4. Imports from Odoo modules:
 
@@ -28,10 +29,10 @@ class AccountingReport(models.TransientModel):
 
     filter = fields.Selection(
         [
-            ('filter_no', 'No Filters'),
-            ('filter_date', 'Date'),
-            ('filter_period', 'Periods'),
-            ('filter_analytic', 'Analytic account'),
+            ('filter_no', _('No Filters')),
+            ('filter_date', _('Date')),
+            ('filter_period', _('Periods')),
+            ('filter_analytic', _('Analytic account')),
         ],
         "Filter by",
         required=True
