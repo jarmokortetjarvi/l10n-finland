@@ -1,3 +1,5 @@
+
+
 class common_report_header_analytic(object):
 
     def get_analytic_account(self, data):

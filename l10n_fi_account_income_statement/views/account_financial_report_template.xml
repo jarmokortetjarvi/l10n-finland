@@ -4,9 +4,9 @@
         <template id="report_financial" inherit_id="account.report_financial">
             <xpath expr="//span[contains(@t-if,'filter_no')]" position="after">
 
-                <span t-if="data['form']['filter'] == 'filter_analytic'">Filtered by analytic account</span>
+                <span t-if="data['form']['filter'] == 'filter_analytic'"><strong>Analytic account</strong></span>
                 <p t-if="data['form']['filter'] == 'filter_analytic'">
-                    Analytic account: Account name<!--<span t-esc="get_analytic_account(data)"/>-->
+                    <span t-esc="o.get_analytic_account(data)"/>
                 </p>
             </xpath>
         </template>

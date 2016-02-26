@@ -14,10 +14,10 @@ from openerp import api, fields, models
 # 6. Unknown third party imports:
 
 
-class AccountCommonReport(models.TransientModel):
+class AccountAccount(models.Model):
 
     # 1. Private attributes
-    _inherit = 'account.common.report'
+    _inherit = 'account.account'
 
     # 2. Fields declaration
 
@@ -32,3 +32,7 @@ class AccountCommonReport(models.TransientModel):
     # 7. Action methods
 
     # 8. Business methods
+    def get_analytic_account(self, data):
+        if data.get('form', False) and data['form'].get('analytic_account', False):
+            return data['form']['analytic_account']
+        return ''

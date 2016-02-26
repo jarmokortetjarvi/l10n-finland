@@ -61,12 +61,15 @@ class AccountingReport(models.TransientModel):
     @api.one
     @api.onchange('filter')
     def onchange_filter(self):
-        filter = self.filter
+        used_filter = self.filter
         if self.filter == 'filter_analytic':
             # Use filter_no to get default values
-            filter = 'filter_no'
+            used_filter = 'filter_no'
 
-        res = super(AccountingReport, self).onchange_filter(filter, self.fiscalyear_id.id)
+        res = super(AccountingReport, self).onchange_filter(used_filter, self.fiscalyear_id.id)
+
+        if self.filter == 'filter_analytic':
+            res['analytic_account'] = self.analytic_account
 
         return res
 
@@ -75,3 +78,10 @@ class AccountingReport(models.TransientModel):
     # 7. Action methods
 
     # 8. Business methods
+    @api.multi
+    def check_report(self):
+        res = super(AccountingReport, self).check_report()
+
+        res['data']['form']['analytic_account'] = self.analytic_account.name
+
+        return res
