@@ -82,7 +82,8 @@ class AccountingReport(models.TransientModel):
     def check_report(self):
         res = super(AccountingReport, self).check_report()
 
-        res['data']['form']['analytic_account'] = self.analytic_account.name
-        res['data']['form']['used_context']['analytic_account_ids'] = [self.analytic_account.id]
+        if res['data']['form']['filter'] == 'filter_analytic':
+            res['data']['form']['analytic_account'] = self.analytic_account.name
+            res['data']['form']['used_context']['analytic_account_ids'] = [self.analytic_account.id]
 
         return res
