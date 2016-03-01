@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-29 10:29+0000\n"
-"PO-Revision-Date: 2015-10-29 12:31+0200\n"
+"POT-Creation-Date: 2016-02-26 12:42+0000\n"
+"PO-Revision-Date: 2016-02-26 14:42+0200\n"
 "Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,16 @@ msgstr ""
 "Plural-Forms: \n"
 "Language: fi\n"
 "X-Generator: Poedit 1.7.5\n"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.model,name:l10n_fi_account_income_statement.model_account_account
+msgid "Account"
+msgstr "Tili"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.model,name:l10n_fi_account_income_statement.model_account_common_report
+msgid "Account Common Report"
+msgstr "Tilin yleisraportti"
 
 #. module: l10n_fi_account_income_statement
 #: model:ir.model,name:l10n_fi_account_income_statement.model_account_financial_report
@@ -28,10 +38,21 @@ msgid "Accounting Report"
 msgstr "Tiliraportti"
 
 #. module: l10n_fi_account_income_statement
+#: field:accounting.report,analytic_account:0
+#: view:website:account.report_financial
+msgid "Analytic account"
+msgstr "Kustannuspaikka"
+
+#. module: l10n_fi_account_income_statement
 #: model:ir.actions.act_window,name:l10n_fi_account_income_statement.action_account_balance_sheet
 #: model:ir.ui.menu,name:l10n_fi_account_income_statement.menu_account_balance_sheet
 msgid "Balance Sheet"
 msgstr "Tase"
+
+#. module: l10n_fi_account_income_statement
+#: field:account.financial.report,company:0
+msgid "Company"
+msgstr "Yritys"
 
 #. module: l10n_fi_account_income_statement
 #: model:ir.actions.act_window,name:l10n_fi_account_income_statement.action_account_external_income_statement
@@ -44,6 +65,11 @@ msgstr "Ulkoinen tuloslaskelma"
 #: model:ir.ui.menu,name:l10n_fi_account_income_statement.menu_account_internal_income_statement
 msgid "Internal Income Statement"
 msgstr "Sisäinen tuloslaskelma"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.model,name:l10n_fi_account_income_statement.model_account_move_line
+msgid "Journal Items"
+msgstr "Päiväkirjan tapahtumat"
 
 #. module: l10n_fi_account_income_statement
 #: field:account.financial.report,code:0
