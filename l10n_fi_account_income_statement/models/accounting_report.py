@@ -27,17 +27,6 @@ class AccountingReport(models.TransientModel):
         domain=[('type', '=', 'normal')],
     )
 
-    filter = fields.Selection(
-        [
-            ('filter_no', _('No Filters')),
-            ('filter_date', _('Date')),
-            ('filter_period', _('Periods')),
-            ('filter_analytic', _('Analytic account')),
-        ],
-        "Filter by",
-        required=True
-    )
-
     # 3. Default methods
     @api.model
     def default_get(self, fields):
@@ -60,16 +49,11 @@ class AccountingReport(models.TransientModel):
 
     # 5. Constraints and onchanges
     @api.one
-    @api.onchange('filter')
-    def onchange_filter(self):
-        used_filter = self.filter
-        if self.filter == 'filter_analytic':
-            # Use filter_no to get default values
-            used_filter = 'filter_no'
+    @api.onchange('analytic_account')
+    def onchange_analytic_account(self):
+        res = {}
 
-        res = super(AccountingReport, self).onchange_filter(used_filter, self.fiscalyear_id.id)
-
-        if self.filter == 'filter_analytic':
+        if self.analytic_account:
             res['analytic_account'] = self.analytic_account
 
         return res
@@ -83,7 +67,10 @@ class AccountingReport(models.TransientModel):
     def check_report(self):
         res = super(AccountingReport, self).check_report()
 
-        if res['data']['form']['filter'] == 'filter_analytic':
+        # Set an empty variable for parsing
+        res['data']['form']['analytic_account'] = ''
+
+        if self.analytic_account:
             res['data']['form']['analytic_account'] = self.analytic_account.name
             res['data']['form']['used_context']['analytic_account_ids'] = [self.analytic_account.id]
 
