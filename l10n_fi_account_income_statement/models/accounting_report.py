@@ -65,13 +65,29 @@ class AccountingReport(models.TransientModel):
     # 8. Business methods
     @api.multi
     def check_report(self):
-        res = super(AccountingReport, self).check_report()
+        for record in self:
+            res = super(AccountingReport, record).check_report()
 
-        # Set an empty variable for parsing
-        res['data']['form']['analytic_account'] = ''
+            # Set an empty variable for parsing
+            res['data']['form']['analytic_account'] = ''
 
-        if self.analytic_account:
-            res['data']['form']['analytic_account'] = self.analytic_account.name
-            res['data']['form']['used_context']['analytic_account_ids'] = [self.analytic_account.id]
+            if record.analytic_account:
+                res['data']['form']['analytic_account'] = record.analytic_account.name
 
-        return res
+                analytic_accounts = record._get_analytic_accounts_recursive(record.analytic_account)
+                analytic_accounts.append(record.analytic_account.id)
+
+                res['data']['form']['used_context']['analytic_account_ids'] = analytic_accounts
+
+            return res
+
+    def _get_analytic_accounts_recursive(self, analytic_account):
+        child_ids = []
+
+        for child in analytic_account.search([('parent_id', '=', analytic_account.id)]):
+            child_ids.append(child.id)
+
+            if analytic_account.search([('parent_id', '=', child.id)]):
+                child_ids += self._get_analytic_accounts_recursive(child)
+
+        return child_ids
