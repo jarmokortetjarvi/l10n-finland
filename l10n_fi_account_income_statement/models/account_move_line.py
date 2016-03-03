@@ -37,9 +37,9 @@ class AccountMoveLine(models.Model):
         res = super(AccountMoveLine, self)._query_get()
 
         if self._context.get('analytic_account_ids'):
-            params = str(tuple(self._context['analytic_account_ids']))
+            params = ','.join(str(e) for e in self._context['analytic_account_ids'])
 
-            query = ' AND l.analytic_account_id IN %s' % params
+            query = ' AND l.analytic_account_id IN (%s)' % params
 
             res += query
 
