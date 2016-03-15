@@ -14,8 +14,8 @@ The number of headers is approx. 300.
 
 Installation
 ============
-- TBD
-
+Install the module form Settings->Local Modules
+Select correct company and taxes.
 
 Credits
 =======

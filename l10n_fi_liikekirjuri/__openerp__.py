@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Author: Jarmo Kortetjärvi
+#    Author: Oy Tawasta OS Technologies Ltd
 #    Copyright 2015 Oy Tawasta OS Technologies Ltd.
 #    Copyright 2015 Vizucom Oy
 #
@@ -21,6 +21,7 @@
 ##############################################################################
 {
     'name': 'Finland - Accounting (Liikekirjuri)',
+    'summary': 'Finnish accounts chart based on Liikekirjuri accounts chart',
     'category': 'Localization/Account Charts',
     'version': '8.0.1.3.2',
     'author': '''
