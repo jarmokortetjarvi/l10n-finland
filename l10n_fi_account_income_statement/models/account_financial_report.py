@@ -155,7 +155,7 @@ class AccountFinancialReport(models.Model):
         ### Sales
         accounts = self.env['account.account'].search([
             ('company_id', '=', company.id),
-            ('code', 'in', ['TUMT'])
+            ('code', 'in', ['TUMT', 'TULT'])
         ])
 
         for account in accounts:
