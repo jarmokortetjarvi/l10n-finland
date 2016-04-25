@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <!-- Finnish administrative products -->
+        <!-- Please maintain the alphabetical order when doing additions -->
+
+        <!-- TODO: internal references? -->
+        <!-- TODO: accounts -->
+        <!-- TODO: taxes -->
+
+        <!-- Harjoittelutuki -->
+        <record id="product_template_harjoittelutuki" model="product.template">
+            <field name="name">Harjoittelutuki</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_administrative" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Hotelliyöpyminen alv 24% -->
+        <record id="product_template_hotelliyopyminen_24" model="product.template">
+            <field name="name">Hotelliyöpyminen alv 24%</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_administrative" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Kilometrikorvaus alv 24% -->
+        <record id="product_template_kilometrikorvaus_24" model="product.template">
+            <field name="name">Kilometrikorvaus alv 24%</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_administrative" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Kokopäiväraha alv 24% -->
+        <record id="product_template_kokopaivaraha_24" model="product.template">
+            <field name="name">Kokopäiväraha alv 24%</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_administrative" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Laskutuslisä -->
+        <record id="product_template_laskutuslisa" model="product.template">
+            <field name="name">Laskutuslisä</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_administrative" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Maksukehotusmaksu -->
+        <record id="product_template_maksukehotusmaksu" model="product.template">
+            <field name="name">Maksukehotusmaksu</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_administrative" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Matkakustannukset alv 24% -->
+        <record id="product_template_matkakustannukset_24" model="product.template">
+            <field name="name">Matkakustannukset alv 24%</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_administrative" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Osapäiväraha alv 24% -->
+        <record id="product_template_matkakustannukset_24" model="product.template">
+            <field name="name">Osapäiväraha alv 24%</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_administrative" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Palvelumaksu -->
+        <record id="product_template_palvelumaksu" model="product.template">
+            <field name="name">Palvelumaksu</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_administrative" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Provisio -->
+        <record id="product_template_provisio" model="product.template">
+            <field name="name">Provisio</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_administrative" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Viivästyskorko 8,5% -->
+        <record id="product_template_viivastyskorko" model="product.template">
+            <field name="name">Viivästyskorko 8,5%</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_administrative" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+        <!-- Yhteistyölaskutus -->
+        <record id="product_template_yhteistyolaskutus" model="product.template">
+            <field name="name">Yhteistyölaskutus</field>
+            <field name="type">consu</field>
+            <field name="categ_id" ref="product_category_administrative" />
+
+            <field name="property_account_income" ref="" />
+            <field name="property_account_expense" ref="" />
+            <field name="taxes_id" ref="" />
+            <field name="supplier_taxes_id" ref="" />
+        </record>
+
+    </data>
+</openerp>
