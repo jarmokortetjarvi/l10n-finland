@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Initialize income statements for all companies upon module installation -->
+        <function model="account.financial.report" name="_init_income_statement_reports" />
+    </data>
+</openerp>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <record id="action_account_internal_income_statement" model="ir.actions.act_window">
+             <field name="name">Internal Income Statement</field>
+             <field name="res_model">accounting.report</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+             <field name="view_mode">form</field>
+             <field name="view_id" ref="accounting_report_view"/>
+             <field name="target">new</field>
+             <field name="context">{'report_code': 'STU'}</field>
+             
+        </record>
+        
+        <record id="action_account_external_income_statement" model="ir.actions.act_window">
+             <field name="name">External Income Statement</field>
+             <field name="res_model">accounting.report</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+             <field name="view_mode">form</field>
+             <field name="view_id" ref="accounting_report_view"/>
+             <field name="target">new</field>
+             <field name="context">{'report_code': 'UTU'}</field>
+        </record>
+        
+        <record id="action_account_balance_sheet" model="ir.actions.act_window">
+             <field name="name">Balance Sheet</field>
+             <field name="res_model">accounting.report</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+             <field name="view_mode">form</field>
+             <field name="view_id" ref="accounting_report_view"/>
+             <field name="target">new</field>
+             <field name="context">{'report_code': 'TASE'}</field>
+        </record>
+        
+        
+        <menuitem name="Internal Income Statement" 
+            action="action_account_internal_income_statement"
+            id="menu_account_internal_income_statement"
+            parent="l10n_fi_account_menu.accounting_reports_finnish"
+            sequence="10"
+            groups="account.group_account_user,account.group_account_manager" />
+            
+        <menuitem name="External Income Statement" 
+            action="action_account_external_income_statement"
+            id="menu_account_external_income_statement"
+            parent="l10n_fi_account_menu.accounting_reports_finnish"
+            sequence="20"
+            groups="account.group_account_user,account.group_account_manager" />
+            
+        <menuitem name="Balance Sheet" 
+            action="action_account_balance_sheet"
+            id="menu_account_balance_sheet"
+            parent="l10n_fi_account_menu.accounting_reports_finnish"
+            sequence="30"
+            groups="account.group_account_user,account.group_account_manager" />
+        
+    </data>
+</openerp>

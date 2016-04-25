@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+		<!-- Actions -->
+        <record id="action_account_moves_all_journal" model="ir.actions.act_window">
+            <field name="name">General Journal</field>
+            <field name="res_model">account.move.line</field>
+            <field name="view_id" ref="account_move_line_tree_journal"/>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_thisyear": 1}</field>
+        </record>
+        
+        <record id="action_account_moves_all_ledger" model="ir.actions.act_window">
+            <field name="name">General Ledger</field>
+            <field name="res_model">account.move.line</field>
+            <field name="view_id" ref="account_move_line_tree_ledger"/>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_thisyear": 1}</field>
+        </record>
+	    
+       	<menuitem
+            action="action_account_moves_all_ledger"
+            id="menu_action_account_moves_all_ledger"
+            parent="l10n_fi_account_menu.accounting_reports_finnish"
+            sequence="110"
+            groups="account.group_account_user"
+        />
+        
+       	<menuitem
+            action="action_account_moves_all_journal"
+            id="menu_action_account_moves_all_journal"
+            parent="l10n_fi_account_menu.accounting_reports_finnish"
+            sequence="120"
+            groups="account.group_account_user"
+        />
+	    
+    </data>
+</openerp>

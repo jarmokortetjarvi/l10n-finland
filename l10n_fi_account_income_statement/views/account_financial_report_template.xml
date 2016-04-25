@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="report_financial" inherit_id="account.report_financial">
+            <xpath expr="//span[contains(@t-if,'filter_no')]" position="after">
+
+                <p t-if="data['form']['analytic_account']">
+                    Analytic account:<br />
+                    <span t-esc="o.get_analytic_account(data)"/>
+                </p>
+            </xpath>
+        </template>
+    </data>
+</openerp>

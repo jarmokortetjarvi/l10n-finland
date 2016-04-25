@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    
+      	<record id="view_account_move_line_filter" model="ir.ui.view">
+            <field name="name">Account Move Line Filter Names</field>
+            <field name="model">account.move.line</field>
+            <field name="inherit_id" ref="account.view_account_move_line_filter"/>
+            <field name="arch" type="xml">
+
+                <search position="inside">
+                    <filter string="This Year" name="thisyear" domain="['|', ('date', '=', False), '&amp;',('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]" />
+                </search>
+
+                <filter string="Account" position='attributes'>
+                    <attribute name='name'>groupby_account</attribute>
+                </filter>
+                
+                <filter string="Partner" position='attributes'>
+                    <attribute name='name'>groupby_partner</attribute>
+                </filter>
+                
+                <filter string="Journal" position='attributes'>
+                    <attribute name='name'>groupby_journal</attribute>
+                </filter>
+                
+                <filter string="Period" position='attributes'>
+                    <attribute name='name'>groupby_period</attribute>
+                </filter>
+                
+               <group string="Group By" position='inside'>
+                    <filter string="State" domain="[]" context="{'group_by':'state'}"/>
+               </group>
+            	
+            </field>
+      	</record>
+    </data>
+</openerp>

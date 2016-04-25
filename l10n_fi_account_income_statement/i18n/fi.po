@@ -1,0 +1,81 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_fi_account_income_statement
+# Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-01 10:10+0000\n"
+"PO-Revision-Date: 2016-03-01 12:11+0200\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>\n"
+"Language-Team: Finnish <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.model,name:l10n_fi_account_income_statement.model_account_account
+msgid "Account"
+msgstr "Tili"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.model,name:l10n_fi_account_income_statement.model_account_financial_report
+msgid "Account Report"
+msgstr "Tiliraportti"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.model,name:l10n_fi_account_income_statement.model_accounting_report
+msgid "Accounting Report"
+msgstr "Tiliraportti"
+
+#. module: l10n_fi_account_income_statement
+#: field:accounting.report,analytic_account:0
+msgid "Analytic account"
+msgstr "Kustannuspaikka"
+
+#. module: l10n_fi_account_income_statement
+#: view:website:account.report_financial
+msgid "Analytic account:"
+msgstr "Kustannuspaikka:"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.actions.act_window,name:l10n_fi_account_income_statement.action_account_balance_sheet
+#: model:ir.ui.menu,name:l10n_fi_account_income_statement.menu_account_balance_sheet
+msgid "Balance Sheet"
+msgstr "Tase"
+
+#. module: l10n_fi_account_income_statement
+#: field:account.financial.report,company:0
+msgid "Company"
+msgstr "Yritys"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.actions.act_window,name:l10n_fi_account_income_statement.action_account_external_income_statement
+#: model:ir.ui.menu,name:l10n_fi_account_income_statement.menu_account_external_income_statement
+msgid "External Income Statement"
+msgstr "Ulkoinen tuloslaskelma"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.actions.act_window,name:l10n_fi_account_income_statement.action_account_internal_income_statement
+#: model:ir.ui.menu,name:l10n_fi_account_income_statement.menu_account_internal_income_statement
+msgid "Internal Income Statement"
+msgstr "Sisäinen tuloslaskelma"
+
+#. module: l10n_fi_account_income_statement
+#: model:ir.model,name:l10n_fi_account_income_statement.model_account_move_line
+msgid "Journal Items"
+msgstr "Päiväkirjan tapahtumat"
+
+#. module: l10n_fi_account_income_statement
+#: field:account.financial.report,code:0
+msgid "Unique code"
+msgstr "Uniikki koodi"
+
+#. module: l10n_fi_account_income_statement
+#: view:accounting.report:l10n_fi_account_income_statement.accounting_report_view
+msgid "[('code','in',('STU','UTU','TASE'))]"
+msgstr "[('code','in',('STU','UTU','TASE'))]"

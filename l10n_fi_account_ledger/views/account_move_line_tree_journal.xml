@@ -1,0 +1,37 @@
+<openerp>
+    <data>
+        <record id="account_move_line_tree_journal" model="ir.ui.view">
+			<field name="name">Account move line journal tree</field>
+			<field name="model">account.move.line</field>
+			<field name="priority" eval="20" />
+			
+			<field name="arch" type="xml">
+                <tree string="General Journal"
+                    colors="red:state == 'draft';black:state == 'valid'" 
+                    default_order="date desc, account_order, id desc">
+                    <field name="account_order" invisible='1'/>
+                    
+                    <field name="date"/>
+                    <field name="account_id" />
+
+                    <field name="name"/>
+                    <field name="ref"/>
+                    <field name="statement_id" invisible="1"/>
+                    <field name="partner_id" />
+                        
+                    <field name="move_id" />
+                    
+                    <field name="debit" sum="Total Debit"/>
+                    <field name="credit" sum="Total Credit"/>
+                    
+                    <field name="invoice" invisible="1"/>
+                    <field name="amount_currency" readonly="True" invisible="not context.get('currency',False)"/>
+                    <field name="currency_id" readonly="True" invisible="not context.get('currency',False)" />
+                    <field name="state" invisible="1"/>
+                    <field name="company_id" invisible="1"/>
+                </tree>
+			</field>
+		</record>
+        
+    </data>
+</openerp>

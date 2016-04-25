@@ -1,0 +1,114 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_fi_account_ledger
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-07 15:53+0000\n"
+"PO-Revision-Date: 2016-01-07 17:54+0200\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.7.5\n"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
+msgid "Account"
+msgstr "Tili"
+
+#. module: l10n_fi_account_ledger
+#: field:account.move.line,account_code:0
+msgid "Account code"
+msgstr "Tilikoodi"
+
+#. module: l10n_fi_account_ledger
+#: field:account.move.line,account_order:0
+msgid "Account order"
+msgstr "Tilien järjestys"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.account_move_line_tree_journal
+#: model:ir.actions.act_window,name:l10n_fi_account_ledger.action_account_moves_all_journal
+#: model:ir.ui.menu,name:l10n_fi_account_ledger.menu_action_account_moves_all_journal
+msgid "General Journal"
+msgstr "Päiväkirja"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.account_move_line_tree_ledger
+#: model:ir.actions.act_window,name:l10n_fi_account_ledger.action_account_moves_all_ledger
+#: model:ir.ui.menu,name:l10n_fi_account_ledger.menu_action_account_moves_all_ledger
+msgid "General Ledger"
+msgstr "Pääkirja"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
+msgid "Group By"
+msgstr "Ryhmittele"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
+msgid "Journal"
+msgstr "Päiväkirja"
+
+#. module: l10n_fi_account_ledger
+#: model:ir.model,name:l10n_fi_account_ledger.model_account_move_line
+msgid "Journal Items"
+msgstr "Päiväkirjan tapahtumat"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
+msgid "Period"
+msgstr "Jakso"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
+msgid "State"
+msgstr "Tila"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
+msgid "This Year"
+msgstr "Tämä vuosi"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.account_move_line_tree_journal
+#: view:account.move.line:l10n_fi_account_ledger.account_move_line_tree_ledger
+msgid "Total Credit"
+msgstr "Kredit yhteensä"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.account_move_line_tree_journal
+#: view:account.move.line:l10n_fi_account_ledger.account_move_line_tree_ledger
+msgid "Total Debit"
+msgstr "Debet yhteensä"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
+msgid "groupby_account"
+msgstr "groupby_account"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
+msgid "groupby_journal"
+msgstr "groupby_journal"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
+msgid "groupby_partner"
+msgstr "groupby_partner"
+
+#. module: l10n_fi_account_ledger
+#: view:account.move.line:l10n_fi_account_ledger.view_account_move_line_filter
+msgid "groupby_period"
+msgstr "groupby_period"

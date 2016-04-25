@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_account_financial_report_form" model="ir.ui.view">
+            <field name="name">Account Financial Report Form Company</field>
+            <field name="model">account.financial.report</field>
+            <field name="inherit_id" ref="account.view_account_financial_report_form" />
+            <field name="arch" type="xml">
+                
+                <field name='sequence' position='after'>
+                    <field name='company' />
+                </field>
+
+            </field>
+        </record>
+        
+        <record id="view_account_financial_report_tree" model="ir.ui.view">
+            <field name="name">Account Financial Report Tree Company</field>
+            <field name="model">account.financial.report</field>
+            <field name="inherit_id" ref="account.view_account_financial_report_tree" />
+            <field name="arch" type="xml">
+                
+                <field name='type' position='after'>
+                    <field name='company' />
+                </field>
+
+            </field>
+        </record>
+
+        <record id="accounting_report_view" model="ir.ui.view">
+            <field name="name">Accounting Report View</field>
+            <field name="model">accounting.report</field>
+            <field name="inherit_id" ref="account.accounting_report_view"/>
+            <field name="arch" type="xml">
+                <field name='account_report_id' position='attributes'> 
+                    <attribute name='domain'>[('code','in',('STU','UTU','TASE'))]</attribute>
+                </field>
+
+                <field name="filter" position="after">
+                    <field name="analytic_account"
+                           options='{"no_open": True, "no_create": True}' />
+                </field>
+
+            </field>
+        </record>
+
+    </data>
+</openerp>
