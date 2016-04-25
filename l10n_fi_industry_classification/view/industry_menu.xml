@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<!-- Menu actions -->
+		
+         <record id="action_business_industry_class" model="ir.actions.act_window">
+             <field name="name">Industry classes</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="res_model">business_industry.class</field>
+             <field name="view_type">form</field>
+             <field name="help">Click to create a new business industry class.</field>
+         </record>
+		
+         <record id="action_business_industry_category" model="ir.actions.act_window">
+             <field name="name">Industry categories</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="res_model">business_industry.category</field>
+             <field name="view_type">form</field>
+             <field name="help">Click to create a new business industry category.</field>
+         </record>
+		
+		 <record id="action_business_industry_industry" model="ir.actions.act_window">
+		     <field name="name">Business industries</field>
+		     <field name="type">ir.actions.act_window</field>
+		     <field name="res_model">business_industry.industry</field>
+		     <field name="view_type">form</field>
+		     <field name="search_view_id" ref="view_business_industry_industry_search"/>
+		     <field name="help">Click to create a new business industry.</field>
+		 </record>
+	
+        <menuitem name='Industry config' id="menu_industry_config" parent="base.menu_base_config" sequence="40"/>
+        
+        <menuitem action="action_business_industry_class" id="menu_business_class" parent="menu_industry_config" sequence="10"/>
+        <menuitem action="action_business_industry_category" id="menu_business_category" parent="menu_industry_config" sequence="20"/>
+        <menuitem action="action_business_industry_industry" id="menu_business_industry" parent="menu_industry_config" sequence="30"/>
+        
+    </data>
+</openerp>

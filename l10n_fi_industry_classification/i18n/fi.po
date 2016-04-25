@@ -1,0 +1,218 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_industry_classification_finnish
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-17 09:39+0000\n"
+"PO-Revision-Date: 2015-11-17 11:39+0200\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.7.5\n"
+
+#. module: crm_industry_classification_finnish
+#: view:business_industry.category:crm_industry_classification_finnish.view_business_industry_category_form
+#: view:business_industry.category:crm_industry_classification_finnish.view_business_industry_category_tree
+msgid "Business categories"
+msgstr "Toimialaluokkien kategoriat"
+
+#. module: crm_industry_classification_finnish
+#: view:business_industry.industry:crm_industry_classification_finnish.view_business_industry_industry_form
+#: view:business_industry.industry:crm_industry_classification_finnish.view_business_industry_industry_tree
+#: model:ir.actions.act_window,name:crm_industry_classification_finnish.action_business_industry_industry
+#: model:ir.ui.menu,name:crm_industry_classification_finnish.menu_business_industry
+msgid "Business industries"
+msgstr "Toimialat"
+
+#. module: crm_industry_classification_finnish
+#: field:res.partner,business_industry_industry:0
+msgid "Business industry"
+msgstr "Toimiala"
+
+#. module: crm_industry_classification_finnish
+#: view:business_industry.industry:crm_industry_classification_finnish.view_business_industry_industry_search
+msgid "Category"
+msgstr "Kategoria"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.category,code:0
+msgid "Category code"
+msgstr "Kategorian koodi"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.category,name:0
+msgid "Category name"
+msgstr "Kategorian nimi"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.category,child_ids:0
+msgid "Child Roles"
+msgstr "Alaroolit"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.class,code:0
+msgid "Class code"
+msgstr "Luokkakoodit"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.class,name:0
+msgid "Class name"
+msgstr "Luokan nimi"
+
+#. module: crm_industry_classification_finnish
+#: model:ir.actions.act_window,help:crm_industry_classification_finnish.action_business_industry_category
+msgid "Click to create a new business industry category."
+msgstr "Klikkaa luodaksesi uuden toimialaluokan kategorian."
+
+#. module: crm_industry_classification_finnish
+#: model:ir.actions.act_window,help:crm_industry_classification_finnish.action_business_industry_class
+msgid "Click to create a new business industry class."
+msgstr "Klikkaa luodaksesi uuden toimialaluokan."
+
+#. module: crm_industry_classification_finnish
+#: model:ir.actions.act_window,help:crm_industry_classification_finnish.action_business_industry_industry
+msgid "Click to create a new business industry."
+msgstr "Klikkaa luodaksesi uuden toimialan."
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.category,create_uid:0
+#: field:business_industry.class,create_uid:0
+#: field:business_industry.industry,create_uid:0
+msgid "Created by"
+msgstr "Luoja"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.category,create_date:0
+#: field:business_industry.class,create_date:0
+#: field:business_industry.industry,create_date:0
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: crm_industry_classification_finnish
+#: constraint:business_industry.category:0
+msgid "Error ! You can not create recursive categories."
+msgstr "Virhe! Et voi luoda rekursiivisia kategorioita."
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.category,id:0 field:business_industry.class,id:0
+#: field:business_industry.industry,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_industry_classification_finnish
+#: view:res.partner:crm_industry_classification_finnish.res_partner_business_industry
+msgid "Industry"
+msgstr "Toimiala"
+
+#. module: crm_industry_classification_finnish
+#: model:ir.actions.act_window,name:crm_industry_classification_finnish.action_business_industry_category
+#: model:ir.ui.menu,name:crm_industry_classification_finnish.menu_business_category
+msgid "Industry categories"
+msgstr "Toimialaluokan kategoriat"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.industry,category:0
+#: field:res.partner,business_industry_category:0
+msgid "Industry category"
+msgstr "Toimialaluokan kategoria"
+
+#. module: crm_industry_classification_finnish
+#: field:res.partner,business_industry_class:0
+msgid "Industry class"
+msgstr "Toimialaluokka"
+
+#. module: crm_industry_classification_finnish
+#: view:business_industry.class:crm_industry_classification_finnish.view_business_industry_class_form
+#: view:business_industry.class:crm_industry_classification_finnish.view_business_industry_class_tree
+#: model:ir.actions.act_window,name:crm_industry_classification_finnish.action_business_industry_class
+#: model:ir.ui.menu,name:crm_industry_classification_finnish.menu_business_class
+msgid "Industry classes"
+msgstr "Toimialaluokat"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.industry,code:0
+msgid "Industry code"
+msgstr "Toimialakoodi"
+
+#. module: crm_industry_classification_finnish
+#: model:ir.ui.menu,name:crm_industry_classification_finnish.menu_industry_config
+msgid "Industry config"
+msgstr "Toimialan asetukset"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.industry,name:0
+msgid "Industry name"
+msgstr "Toimialan nimi"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.category,write_uid:0
+#: field:business_industry.class,write_uid:0
+#: field:business_industry.industry,write_uid:0
+msgid "Last Updated by"
+msgstr "Viimeisin päivittäjä"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.category,write_date:0
+#: field:business_industry.class,write_date:0
+#: field:business_industry.industry,write_date:0
+msgid "Last Updated on"
+msgstr "Viimeisin päivitys"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.category,parent_left:0
+msgid "Left parent"
+msgstr "Vasen vanhempi"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.category,industry_class:0
+msgid "Main class"
+msgstr "Pääluokka"
+
+#. module: crm_industry_classification_finnish
+#: view:business_industry.industry:crm_industry_classification_finnish.view_business_industry_industry_search
+msgid "Name"
+msgstr "Nimi"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.category,parent_id:0
+msgid "Parent Role"
+msgstr "Ylätason rooli"
+
+#. module: crm_industry_classification_finnish
+#: model:ir.model,name:crm_industry_classification_finnish.model_res_partner
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: crm_industry_classification_finnish
+#: field:business_industry.category,parent_right:0
+msgid "Right parent"
+msgstr "Oikea vanhempi"
+
+#. module: crm_industry_classification_finnish
+#: view:business_industry.industry:crm_industry_classification_finnish.view_business_industry_industry_search
+msgid "Search Industries"
+msgstr "Hae toimialoja"
+
+#. module: crm_industry_classification_finnish
+#: view:business_industry.industry:crm_industry_classification_finnish.view_business_industry_industry_search
+msgid "Search by name or code"
+msgstr "Hae nimen tai koodin perusteella"
+
+#. module: crm_industry_classification_finnish
+#: view:business_industry.industry:crm_industry_classification_finnish.view_business_industry_industry_search
+msgid "Search category by name or code"
+msgstr "Hae kategorian nimellä tai koodilla"
+
+#. module: crm_industry_classification_finnish
+#: code:addons/crm_industry_classification_finnish/models/industry_class.py:34
+#: sql_constraint:business_industry.class:0
+#, python-format
+msgid "The business industry main class code has to be unique"
+msgstr "Toimialaluokan koodin pitää olla uniikki"

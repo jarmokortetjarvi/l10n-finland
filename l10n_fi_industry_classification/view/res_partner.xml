@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="res_partner_business_industry">
+            <field name="name">res.partner.form.business.industry</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="priority" eval="15" />
+            <field name="arch" type="xml">
+
+                <page name="internal_notes" position="inside">
+                    <group attrs="{'invisible': [('is_company','=',False)]}">
+                        <div name="industry_class">
+                            <group>
+                                <field name="business_industry_class"
+                                       options='{"no_create": True, "no_open": True}'/>
+
+                                <field name="business_industry_category"
+                                       options='{"no_create": True, "no_open": True}'
+                                       invisible="1"
+                                       required="0"
+                                       on_change="onchange_industry_category(business_industry_category, context)"/>
+                                <field name="business_industry_industry"
+                                       options='{"no_create": True, "no_open": True}'
+                                       required="0"
+                                       on_change="onchange_industry_industry(business_industry_industry, context)"/>
+                            </group>
+                        </div>
+                        <div>
+
+                        </div>
+                    </group>
+                </page>
+
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+		<record id="business_industry_class_a" model="business_industry.class">
+		    <field name="code">A</field>
+		    <field name="name">Maatalous, metsätalous ja kalatalous</field>
+		</record>
+		<record id="business_industry_class_b" model="business_industry.class">
+		    <field name="code">B</field>
+		    <field name="name">Kaivostoiminta ja louhinta</field>
+		</record>
+		<record id="business_industry_class_c" model="business_industry.class">
+		    <field name="code">C</field>
+		    <field name="name">Teollisuus</field>
+		</record>
+		<record id="business_industry_class_d" model="business_industry.class">
+		    <field name="code">D</field>
+		    <field name="name">Sähkö-, kaasu- ja lämpöhuolto, jäähdytysliiketoiminta</field>
+		</record>
+		<record id="business_industry_class_e" model="business_industry.class">
+		    <field name="code">E</field>
+		    <field name="name">Vesihuolto, viemäri- ja jätevesihuolto, jätehuolto ja muu ympäristön puhtaanapito</field>
+		</record>
+		<record id="business_industry_class_f" model="business_industry.class">
+		    <field name="code">F</field>
+		    <field name="name">Rakentaminen</field>
+		</record>
+		<record id="business_industry_class_g" model="business_industry.class">
+		    <field name="code">G</field>
+		    <field name="name">Tukku- ja vähittäiskauppa; moottoriajoneuvojen ja moottoripyörien korjaus</field>
+		</record>
+		<record id="business_industry_class_h" model="business_industry.class">
+		    <field name="code">H</field>
+		    <field name="name">Kuljetus ja varastointi</field>
+		</record>
+		<record id="business_industry_class_i" model="business_industry.class">
+		    <field name="code">I</field>
+		    <field name="name">Majoitus- ja ravitsemistoiminta</field>
+		</record>
+		<record id="business_industry_class_j" model="business_industry.class">
+		    <field name="code">J</field>
+		    <field name="name">Informaatio ja viestintä</field>
+		</record>
+		<record id="business_industry_class_k" model="business_industry.class">
+		    <field name="code">K</field>
+		    <field name="name">Rahoitus- ja vakuutustoiminta</field>
+		</record>
+		<record id="business_industry_class_l" model="business_industry.class">
+		    <field name="code">L</field>
+		    <field name="name">Kiinteistöalan toiminta</field>
+		</record>
+		<record id="business_industry_class_m" model="business_industry.class">
+		    <field name="code">M</field>
+		    <field name="name">Ammatillinen, tieteellinen ja tekninen toiminta</field>
+		</record>
+		<record id="business_industry_class_n" model="business_industry.class">
+		    <field name="code">N</field>
+		    <field name="name">Hallinto- ja tukipalvelutoiminta</field>
+		</record>
+		<record id="business_industry_class_o" model="business_industry.class">
+		    <field name="code">O</field>
+		    <field name="name">Julkinen hallinto ja maanpuolustus; pakollinen sosiaalivakuutus</field>
+		</record>
+		<record id="business_industry_class_p" model="business_industry.class">
+		    <field name="code">P</field>
+		    <field name="name">Koulutus</field>
+		</record>
+		<record id="business_industry_class_q" model="business_industry.class">
+		    <field name="code">Q</field>
+		    <field name="name">Terveys- ja sosiaalipalvelut</field>
+		</record>
+		<record id="business_industry_class_r" model="business_industry.class">
+		    <field name="code">R</field>
+		    <field name="name">Taiteet, viihde ja virkistys</field>
+		</record>
+		<record id="business_industry_class_s" model="business_industry.class">
+		    <field name="code">S</field>
+		    <field name="name">Muu palvelutoiminta</field>
+		</record>
+		<record id="business_industry_class_t" model="business_industry.class">
+		    <field name="code">T</field>
+		    <field name="name">Kotitalouksien toiminta työnantajina; kotitalouksien eriyttämätön toiminta tavaroiden ja palvelujen tuottamiseksi omaan käyttöön</field>
+		</record>
+		<record id="business_industry_class_u" model="business_industry.class">
+		    <field name="code">U</field>
+		    <field name="name">Kansainvälisten organisaatioiden ja toimielinten toiminta</field>
+		</record>
+		<record id="business_industry_class_x" model="business_industry.class">
+		    <field name="code">X</field>
+		    <field name="name">Toimiala tuntematon</field>
+		</record>
+    </data>
+</openerp>

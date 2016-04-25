@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- Business industries -->
+        
+        <record id="view_business_industry_class_form" model="ir.ui.view">
+             <field name="name">business.industry.class.form</field>
+             <field name="model">business_industry.class</field>
+             <field name="arch" type="xml">
+                 <form string="Industry classes">
+                     <group col="1">
+                         <field name="code" required="1"/>
+                         <field name="name" required="1"/>
+                     </group>
+                 </form>
+             </field>
+         </record>
+         
+         <record id="view_business_industry_class_tree" model="ir.ui.view">
+             <field name="name">business.industry.class.tree</field>
+             <field name="model">business_industry.class</field>
+             <field name="field_parent">child_ids</field>
+             <field name="arch" type="xml">
+                 <tree toolbar="1" string="Industry classes">
+                     <field name="code"/>
+                     <field name="name"/>
+                 </tree>
+             </field>
+         </record>
+
+    </data>
+</openerp>
