@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="0">
+        <!-- Set taxes for the products -->
+        <function model="product.template" name="init_attributes" />
+    </data>
+</openerp>
