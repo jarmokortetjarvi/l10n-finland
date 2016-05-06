@@ -33,8 +33,8 @@ class AccountMoveLine(models.Model):
 
     # 8. Business methods
     @api.model
-    def _query_get(self):
-        res = super(AccountMoveLine, self)._query_get()
+    def _query_get(self, obj):
+        res = super(AccountMoveLine, self)._query_get(obj)
 
         if self._context.get('analytic_account_ids'):
             params = ','.join(str(e) for e in self._context['analytic_account_ids'])
