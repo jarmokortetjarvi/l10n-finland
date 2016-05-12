@@ -17,4 +17,3 @@ Available addons
 [l10n_fi_payment_terms](l10n_fi_payment_terms/) | Common Finnish invoice payment terms
 [l10n_fi_product_administrative](l10n_fi_product_administrative/) | Finnish Administrative Products
 [l10n_fi_product_authority](l10n_fi_product_authority/) | Finnish Authority Products
-
