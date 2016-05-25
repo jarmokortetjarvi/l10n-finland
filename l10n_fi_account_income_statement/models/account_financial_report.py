@@ -202,18 +202,42 @@ class AccountFinancialReport(models.Model):
             })
             
     def _create_balance_sheet_report(self, company):
-        account = self.env['account.account'].search([
-            ('company_id', '=', company.id),
-            ('code', 'in', ['TAVV', 'TAVT'])
-        ])
-        
         ## ASSETS AND LIABILITIES
         report_header = self.create({
             'company': company.id,
             'code': 'TASE',
             'name': 'Tase',
+            'type': 'sum',
+            'sequence': '10',
+            'display_detail': 'detail_flat',
+        })
+
+        tavv = self.env['account.account'].search([
+            ('company_id', '=', company.id),
+            ('code', 'in', ['TAVV'])
+        ])
+        self.create({
+            'company': company.id,
+            'code': 'TAVV',
+            'name': 'VASTAAVAA',
             'type': 'accounts',
             'sequence': '10',
             'display_detail': 'detail_with_hierarchy',
-            'account_ids': [(6, 0, account.ids)]
+            'parent_id': report_header.id,
+            'account_ids': [(6, 0, tavv.ids)]
+        })
+
+        tavt = self.env['account.account'].search([
+            ('company_id', '=', company.id),
+            ('code', 'in', ['TAVT'])
+        ])
+        self.create({
+            'company': company.id,
+            'code': 'TAVT',
+            'name': 'VASTATTAVAA',
+            'type': 'accounts',
+            'sequence': '20',
+            'display_detail': 'detail_with_hierarchy',
+            'parent_id': report_header.id,
+            'account_ids': [(6, 0, tavv.ids)]
         })
