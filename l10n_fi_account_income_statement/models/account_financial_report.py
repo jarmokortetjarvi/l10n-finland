@@ -58,9 +58,9 @@ class AccountFinancialReport(models.Model):
         reports = self.search([
             ('company', '=', company.id),
             '|', '|',
-            ('code','=','STU'),
-            ('parent_id.code','=','STU'),
-            ('parent_id.parent_id.code','=','STU')
+            ('code', '=', 'STU'),
+            ('parent_id.code', '=', 'STU'),
+            ('parent_id.parent_id.code', '=', 'STU')
         ])
         
         # Remote related accounting reports
@@ -74,9 +74,9 @@ class AccountFinancialReport(models.Model):
         reports = self.search([
             ('company', '=', company.id),
             '|', '|',
-            ('code','=','UTU'),
-            ('parent_id.code','=','UTU'),
-            ('parent_id.parent_id.code','=','UTU')
+            ('code', '=', 'UTU'),
+            ('parent_id.code', '=', 'UTU'),
+            ('parent_id.parent_id.code', '=', 'UTU')
         ])
         
         # Remote related accounting reports
@@ -90,9 +90,9 @@ class AccountFinancialReport(models.Model):
         reports = self.search([
             ('company', '=', company.id),
             '|', '|',
-            ('code','=','TASE'),
-            ('parent_id.code','=','TASE'),
-            ('parent_id.parent_id.code','=','TASE')
+            ('code','=', 'TASE'),
+            ('parent_id.code', '=', 'TASE'),
+            ('parent_id.parent_id.code', '=', 'TASE')
         ])
         
         # Remote related accounting reports
@@ -185,7 +185,17 @@ class AccountFinancialReport(models.Model):
         
         accounts = self.env['account.account'].search([
             ('company_id', '=', company.id),
-            ('code', 'in', ['TUHK', 'TUMP', 'TUPA', 'TULK', 'TURR'])
+            ('code', 'in', [
+                'TUHK',  # Henkilöstökulut
+                'TULK',  # Liiketoiminnan muut kulut
+                'TULT',  # Liiketoiminnan muut tuotot
+                'TUMP',  # Materiaalit ja palvelut
+                'TUOV',  # Osuus osakkuuyritysten voitosta (tappiosta)
+                'TUPA',  # Poistot ja arvonalentumiset
+                'TUES',  # Tulos ennen satunnaisia eriä
+                'TUET',  # Tulos ennen tilinpäätössiirtoja ja veroja
+                'TURR',  # Rahoitustuotot ja -kulut
+            ])
         ])
 
         for account in accounts:
