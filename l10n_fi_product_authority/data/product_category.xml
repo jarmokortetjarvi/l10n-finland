@@ -13,5 +13,17 @@
             <field name="parent_id" ref="product.product_category_all" />
         </record>
 
+        <!-- Travel expenses -->
+        <record id="product_category_travel_expenses" model="product.category">
+            <field name="name">Kilometrikorvaukset</field>
+            <field name="parent_id" ref="product_category_authority" />
+        </record>
+
+        <!-- Allowances -->
+        <record id="product_category_allowances" model="product.category">
+            <field name="name">Päivärahat</field>
+            <field name="parent_id" ref="product_category_authority" />
+        </record>
+
     </data>
 </openerp>
