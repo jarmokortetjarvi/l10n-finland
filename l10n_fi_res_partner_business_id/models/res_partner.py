@@ -23,10 +23,16 @@ class ResPartner(models.Model):
 
     # 2. Fields declaration
     business_id = fields.Char('Business id')
+    businessid = fields.Char('Business id', compute='compute_businessid')
 
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
+    @api.model
+    @api.depends('business_id')
+    def compute_businessid(self):
+        for record in self:
+            record.businessid = record.business_id
 
     # 5. Constraints and onchanges
     @api.onchange('businessid')
@@ -34,9 +40,6 @@ class ResPartner(models.Model):
         # Reformat business id from 12345671 to 1234567-1
         if isinstance(self.businessid, basestring) and re.match('^[0-9]{8}$', self.businessid):
             self.businessid = self.businessid[:7] + '-' + self.businessid[7:]
-
-        if self._check_businessid():
-            self.update_vat(self.businessid)
 
     @api.constrains('business_id')
     def _validate_business_id(self):
