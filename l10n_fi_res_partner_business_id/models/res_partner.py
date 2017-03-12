@@ -36,7 +36,7 @@ class ResPartner(models.Model):
 
     # 5. Constraints and onchanges
     @api.onchange('businessid')
-    def onchange_businessid(self):
+    def onchange_businessid_update_format(self):
         # Reformat business id from 12345671 to 1234567-1
         if isinstance(self.businessid, basestring) and re.match('^[0-9]{8}$', self.businessid):
             self.businessid = self.businessid[:7] + '-' + self.businessid[7:]
