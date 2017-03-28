@@ -28,7 +28,7 @@
     'author': 'Oy Tawasta Technologies Ltd',
     'license': 'AGPL-3',
     'application': False,
-    'installable': True,
+    'installable': False,
     'depends': [
         'crm',
         'l10n_fi_payment_terms',

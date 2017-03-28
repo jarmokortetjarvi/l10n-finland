@@ -5,7 +5,7 @@
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from openerp import api, fields, models
+from odoo import api, fields, models
 
 # 4. Imports from Odoo modules:
 
@@ -30,6 +30,9 @@ class PaymentTerm(models.Model):
     # 4. Compute and search fields, in the same order that fields declaration
 
     # 5. Constraints and onchanges
+    _sql_constraints = [
+        ('unique_code', 'unique(code)', 'The code must be unique!')
+    ]
 
     # 6. CRUD methods
 
