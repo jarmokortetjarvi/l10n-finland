@@ -4,6 +4,9 @@
 #    Author: Oy Tawasta OS Technologies Ltd.
 #    Copyright 2015 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
+#    Author: Avoin.Systems
+#    Copyright 2017 Avoin.Systems (https://avoin.systems)
+#
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
 #    published by the Free Software Foundation, either version 3 of the
@@ -19,13 +22,15 @@
 #
 ##############################################################################
 
+# noinspection PyStatementEffect
 {
     'name': 'Finnish Payment Terms',
     'summary': 'Common Finnish invoice payment terms',
-    'version': '8.0.0.3.1',
+    'version': '10.0.1.0.0',
     'category': 'Localization',
     'website': 'https://odoo-community.org/',
-    'author': 'Oy Tawasta Technologies Ltd., Odoo Community Association (OCA)',
+    'author': 'Oy Tawasta Technologies Ltd., Avoin.Systems, '
+              'Odoo Community Association (OCA)',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data noupdate="1">
     
         <!--
@@ -21,26 +21,13 @@
             <field name="sequence">1</field>
         </record>
         
-        <record id="account_payment_term_line_immediate" model="account.payment.term.line">
-            <field name="value">balance</field>
-            <field eval="0" name="days"/>
-            <field eval="0" name="days2"/>
-            <field eval="account_payment_term_immediate" name="payment_id"/>
-        </record>
-        
         <!-- 7 Days -->
         <record id="account_payment_term_7_days" model="account.payment.term">
             <field name="name">7 Days</field>
             <field name="code">7_days</field>
             <field name="note">7 Days</field>
             <field name="sequence">2</field>
-        </record>
-        
-        <record id="account_payment_term_line_7_days" model="account.payment.term.line">
-            <field name="value">balance</field>
-            <field eval="7" name="days"/>
-            <field eval="0" name="days2"/>
-            <field eval="account_payment_term_7_days" name="payment_id"/>
+            <field name="line_ids" eval="[(0, 0, {'days': 7})]"/>
         </record>
         
         <!-- 10 Days -->
@@ -49,13 +36,7 @@
             <field name="code">10_days</field>
             <field name="note">10 Days</field>
             <field name="sequence">3</field>
-        </record>
-        
-        <record id="account_payment_term_line_10_days" model="account.payment.term.line">
-            <field name="value">balance</field>
-            <field eval="10" name="days"/>
-            <field eval="0" name="days2"/>
-            <field eval="account_payment_term_10_days" name="payment_id"/>
+            <field name="line_ids" eval="[(0, 0, {'days': 10})]"/>
         </record>
         
         <!-- 14 Days -->
@@ -64,13 +45,7 @@
             <field name="code">14_days</field>
             <field name="note">14 Days</field>
             <field name="sequence">4</field>
-        </record>
-        
-        <record id="account_payment_term_line_14_days" model="account.payment.term.line">
-            <field name="value">balance</field>
-            <field eval="14" name="days"/>
-            <field eval="0" name="days2"/>
-            <field eval="account_payment_term_14_days" name="payment_id"/>
+            <field name="line_ids" eval="[(0, 0, {'days': 14})]"/>
         </record>
         
         <!-- 21 Days -->
@@ -79,13 +54,7 @@
             <field name="code">21_days</field>
             <field name="note">21 Days</field>
             <field name="sequence">5</field>
-        </record>
-        
-        <record id="account_payment_term_line_21_days" model="account.payment.term.line">
-            <field name="value">balance</field>
-            <field eval="21" name="days"/>
-            <field eval="0" name="days2"/>
-            <field eval="account_payment_term_21_days" name="payment_id"/>
+            <field name="line_ids" eval="[(0, 0, {'days': 21})]"/>
         </record>
         
         <!-- 30 Days -->
@@ -94,13 +63,7 @@
             <field name="code">30_days</field>
             <field name="note">30 Days</field>
             <field name="sequence">6</field>
-        </record>
-        
-        <record id="account_payment_term_line_30_days" model="account.payment.term.line">
-            <field name="value">balance</field>
-            <field eval="30" name="days"/>
-            <field eval="0" name="days2"/>
-            <field eval="account_payment_term_30_days" name="payment_id"/>
+            <field name="line_ids" eval="[(0, 0, {'days': 30})]"/>
         </record>
         
         <!-- 45 Days -->
@@ -109,13 +72,7 @@
             <field name="code">45_days</field>
             <field name="note">45 Days</field>
             <field name="sequence">7</field>
-        </record>
-        
-        <record id="account_payment_term_line_45_days" model="account.payment.term.line">
-            <field name="value">balance</field>
-            <field eval="45" name="days"/>
-            <field eval="0" name="days2"/>
-            <field eval="account_payment_term_45_days" name="payment_id"/>
+            <field name="line_ids" eval="[(0, 0, {'days': 45})]"/>
         </record>
         
         <!-- 60 Days -->
@@ -124,13 +81,7 @@
             <field name="code">60_days</field>
             <field name="note">60 Days</field>
             <field name="sequence">8</field>
-        </record>
-        
-        <record id="account_payment_term_line_60_days" model="account.payment.term.line">
-            <field name="value">balance</field>
-            <field eval="60" name="days"/>
-            <field eval="0" name="days2"/>
-            <field eval="account_payment_term_60_days" name="payment_id"/>
+            <field name="line_ids" eval="[(0, 0, {'days': 60})]"/>
         </record>
         
         <!-- 90 Days -->
@@ -139,14 +90,8 @@
             <field name="code">90_days</field>
             <field name="note">90 Days</field>
             <field name="sequence">9</field>
+            <field name="line_ids" eval="[(0, 0, {'days': 90})]"/>
         </record>
         
-        <record id="account_payment_term_line_90_days" model="account.payment.term.line">
-            <field name="value">balance</field>
-            <field eval="90" name="days"/>
-            <field eval="0" name="days2"/>
-            <field eval="account_payment_term_90_days" name="payment_id"/>
-        </record>
-
     </data>
-</openerp>
+</odoo>

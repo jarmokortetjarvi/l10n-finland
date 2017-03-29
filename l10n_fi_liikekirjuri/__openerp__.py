@@ -44,5 +44,5 @@ Odoo Community Association (OCA)
         'data/account.chart.template.csv',
         'data/account.tax.template.csv',
     ],
-    'installable': 'True',
+    'installable': False,
 }
