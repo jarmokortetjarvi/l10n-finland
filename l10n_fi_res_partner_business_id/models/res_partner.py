@@ -8,6 +8,7 @@ import re
 # 3. Odoo imports (openerp):
 from openerp import api, fields, models
 from openerp.exceptions import ValidationError
+from openerp import _
 
 # 4. Imports from Odoo modules:
 
@@ -43,21 +44,25 @@ class ResPartner(models.Model):
 
     @api.constrains('business_id')
     def _validate_business_id(self):
-
         if not self._validate_business_id_format():
-            raise ValidationError("Your business id is invalid. Please use format 1234567-1")
+            msg = _("Your business id '%s' is invalid. Please use format 1234567-1" % self.business_id)
+            raise ValidationError(msg)
 
+        # The formal format is ok, check the validation number
         if not self._validate_business_id_validation_number():
-            raise ValidationError("Your business check number is invalid. Please check the given business id")
+            msg = _("Your business id '%s' is invalid. Please check the given business id" % self.business_id)
+            raise ValidationError(msg)
 
         return True
 
-    def _validate_business_id_format(self):
+    def _validate_business_id_format(self, business_id=False):
+        business_id = business_id or self.business_id
+
         # Country code is not FI, skip this
-        if self.country_id.code != 'FI':
+        if hasattr(self, 'country_code') and self.country_id.code != 'FI':
             return True
 
-        business_id = self.business_id
+        business_id = business_id or self.business_id
 
         # Business id is not set. This is fine.
         if not business_id:
@@ -70,16 +75,19 @@ class ResPartner(models.Model):
             return True
 
         # Validate business id formal format
-        if not re.match('^[0-9]{7}[-][0-9]{1}$', business_id):
-            return False
+        if re.match('^[0-9]{7}[-][0-9]{1}$', business_id):
+            return True
 
-    def _validate_business_id_validation_number(self):
-        # The formal format is ok, check the validation number
+        return False
+
+    def _validate_business_id_validation_number(self, business_id):
+        business_id = business_id or self.business_id
+
         multipliers = [7, 9, 10, 5, 8, 4, 2]  # Number-space spesific multipliers
         validation_multiplier = 0  # Initial multiplier
         number_index = 0  # The index of the number we are parsing
 
-        business_id_number = re.sub("[^0-9]", "", self.business_id)  # business id without "-" for validation
+        business_id_number = re.sub("[^0-9]", "", business_id)  # business id without "-" for validation
         validation_bit = business_id_number[7:8]
 
         # Test the validation bit
@@ -113,4 +121,5 @@ class ResPartner(models.Model):
 
         if hasattr(partners[0], 'businessid'):
             for partner in partners:
-                partner.business_id = partner.businessid
+                if partner.businessid:
+                    partner.business_id = partner.businessid
