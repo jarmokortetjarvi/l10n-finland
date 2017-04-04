@@ -43,11 +43,21 @@ class ResPartner(models.Model):
 
     @api.constrains('business_id')
     def _validate_business_id(self):
-        business_id = self.business_id
 
-        # Contry code is not FI, skip this
+        if not self._validate_business_id_format():
+            raise ValidationError("Your business id is invalid. Please use format 1234567-1")
+
+        if not self._validate_business_id_validation_number():
+            raise ValidationError("Your business check number is invalid. Please check the given business id")
+
+        return True
+
+    def _validate_business_id_format(self):
+        # Country code is not FI, skip this
         if self.country_id.code != 'FI':
             return True
+
+        business_id = self.business_id
 
         # Business id is not set. This is fine.
         if not business_id:
@@ -61,14 +71,15 @@ class ResPartner(models.Model):
 
         # Validate business id formal format
         if not re.match('^[0-9]{7}[-][0-9]{1}$', business_id):
-            raise ValidationError("Your business id is invalid. Please use format 1234567-1")
+            return False
 
+    def _validate_business_id_validation_number(self):
         # The formal format is ok, check the validation number
         multipliers = [7, 9, 10, 5, 8, 4, 2]  # Number-space spesific multipliers
-        validation_multiplier = 0  # Inital multiplier
+        validation_multiplier = 0  # Initial multiplier
         number_index = 0  # The index of the number we are parsing
 
-        business_id_number = re.sub("[^0-9]", "", business_id)  # buisiness id without "-" for validation
+        business_id_number = re.sub("[^0-9]", "", self.business_id)  # business id without "-" for validation
         validation_bit = business_id_number[7:8]
 
         # Test the validation bit
@@ -83,7 +94,9 @@ class ResPartner(models.Model):
             modulo = 11 - modulo
 
         if int(modulo) != int(validation_bit):
-            raise ValidationError("Your business check number is invalid. Please check the given business id")
+            return False
+
+        return True
 
     # 6. CRUD methods
 
@@ -93,7 +106,6 @@ class ResPartner(models.Model):
     @api.model
     def _init_business_ids(self):
         # When the module is installed update business ids from alternatively named fields
-
         partners = self.search([])
 
         if not partners:
