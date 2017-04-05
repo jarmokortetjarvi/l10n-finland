@@ -98,7 +98,7 @@ class ResPartner(models.Model):
         modulo = validation_multiplier % 11
 
         # Get the final modulo
-        if modulo >= 2 and modulo <= 10:
+        if 2 <= modulo <= 10:
             modulo = 11 - modulo
 
         if int(modulo) != int(validation_bit):
