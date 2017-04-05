@@ -80,7 +80,7 @@ class ResPartner(models.Model):
 
         return False
 
-    def _validate_business_id_validation_number(self, business_id):
+    def _validate_business_id_validation_number(self, business_id=False):
         business_id = business_id or self.business_id
 
         multipliers = [7, 9, 10, 5, 8, 4, 2]  # Number-space spesific multipliers
