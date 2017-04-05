@@ -44,6 +44,10 @@ class ResPartner(models.Model):
 
     @api.constrains('business_id')
     def _validate_business_id(self):
+        # Business id can be empty
+        if not self.business_id:
+            return True
+
         if not self._validate_business_id_format():
             msg = _("Your business id '%s' is invalid. Please use format 1234567-1" % self.business_id)
             raise ValidationError(msg)
