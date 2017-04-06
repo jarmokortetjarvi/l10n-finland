@@ -24,6 +24,8 @@ class ResPartner(models.Model):
 
     # 2. Fields declaration
     business_id = fields.Char('Business id')
+
+    # A deprecated helper field
     businessid = fields.Char('Business id', compute='compute_businessid')
 
     # 3. Default methods
@@ -36,11 +38,11 @@ class ResPartner(models.Model):
             record.businessid = record.business_id
 
     # 5. Constraints and onchanges
-    @api.onchange('businessid')
+    @api.onchange('business_id')
     def onchange_businessid_update_format(self):
         # Reformat business id from 12345671 to 1234567-1
-        if isinstance(self.businessid, basestring) and re.match('^[0-9]{8}$', self.businessid):
-            self.businessid = self.businessid[:7] + '-' + self.businessid[7:]
+        if isinstance(self.business_id, basestring) and re.match('^[0-9]{8}$', self.business_id):
+            self.business_id = self.business_id[:7] + '-' + self.business_id[7:]
 
     @api.constrains('business_id')
     def _validate_business_id(self):
@@ -51,11 +53,13 @@ class ResPartner(models.Model):
         if not self._validate_business_id_format():
             msg = _("Your business id '%s' is invalid. Please use format 1234567-1" % self.business_id)
             raise ValidationError(msg)
+            return False
 
         # The formal format is ok, check the validation number
         if not self._validate_business_id_validation_number():
             msg = _("Your business id '%s' is invalid. Please check the given business id" % self.business_id)
             raise ValidationError(msg)
+            return False
 
         return True
 
