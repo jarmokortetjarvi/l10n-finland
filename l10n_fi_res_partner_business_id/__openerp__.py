@@ -22,7 +22,7 @@
 {
     'name': 'Partner Finnish Business ID',
     'summary': 'Add a Finnish business id for partners',
-    'version': '8.0.0.3.7',
+    'version': '8.0.0.4.0',
     'category': 'CRM',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

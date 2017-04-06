@@ -8,13 +8,17 @@
 			<field name="inherit_id" ref="base.view_partner_form" />
 			<field name="arch" type="xml">
 
+				<!-- TODO: better view (div, one attrs) -->
 				<field name="category_id" position="before">
-					<label for="business_id" class="oe_edit_only"/>
-					<h2>
+					<label for="business_id"
+						   class="oe_edit_only"
+						   attrs="{'invisible': ['|', ('is_company', '=', False)]}"
+					/>
+					<h2 attrs="{'invisible': ['|', ('is_company', '=', False)]}">
 						<field
 								name="business_id"
 								placeholder="Business id (1234567-1)"
-								attrs="{'invisible': ['|', ('is_company', '=', False), ('country_id', '!=', 71)]}"
+
 						/>
 					</h2>
 				</field>

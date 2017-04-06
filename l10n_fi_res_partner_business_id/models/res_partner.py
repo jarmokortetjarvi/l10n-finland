@@ -50,19 +50,25 @@ class ResPartner(models.Model):
         if not self.business_id:
             return True
 
-        if not self._validate_business_id_format():
-            msg = _("Your business id '%s' is invalid. Please use format 1234567-1" % self.business_id)
-            raise ValidationError(msg)
-            return False
+        # Validate format etc.
+        if self.country_id and self.country_id.code:
+            country_code = self.country_id.code
+            method_name = "action_validate_business_id_" + country_code.lower()
 
-        # The formal format is ok, check the validation number
-        if not self._validate_business_id_validation_number():
-            msg = _("Your business id '%s' is invalid. Please check the given business id" % self.business_id)
-            raise ValidationError(msg)
-            return False
+            # Run country-specific validators
+            if hasattr(self, method_name):
+                getattr(self, method_name)()
 
+            # TODO: else: generic validator (format, characters)
+
+        else:
+            # No country or country code. We can't validate
+            return True
+
+        # We should never get to this point, but if there is no errors, return True
         return True
 
+    # TODO: country aware validator
     def _validate_business_id_format(self, business_id=False):
         business_id = business_id or self.business_id
 
@@ -88,6 +94,7 @@ class ResPartner(models.Model):
 
         return False
 
+    # TODO: country aware validator
     def _validate_business_id_validation_number(self, business_id=False):
         business_id = business_id or self.business_id
 
@@ -117,6 +124,18 @@ class ResPartner(models.Model):
     # 6. CRUD methods
 
     # 7. Action methods
+    @api.multi
+    def action_validate_business_id_fi(self):
+        # Validate Finnish business ID
+        if self.country_id.code == 'FI':
+            if not self._validate_business_id_format():
+                msg = _("Your business id '%s' is invalid. Please use format 1234567-1" % self.business_id)
+                raise ValidationError(msg)
+
+            # The formal format is ok, check the validation number
+            if not self._validate_business_id_validation_number():
+                msg = _("Your business id '%s' is invalid. Please check the given business id" % self.business_id)
+                raise ValidationError(msg)
 
     # 8. Business methods
     @api.model
