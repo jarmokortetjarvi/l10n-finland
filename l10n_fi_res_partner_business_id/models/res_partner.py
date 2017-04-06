@@ -25,21 +25,13 @@ class ResPartner(models.Model):
     # 2. Fields declaration
     business_id = fields.Char('Business id')
 
-    # A deprecated helper field
-    businessid = fields.Char('Business id', compute='compute_businessid')
-
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
-    @api.model
-    @api.depends('business_id')
-    def compute_businessid(self):
-        for record in self:
-            record.businessid = record.business_id
 
     # 5. Constraints and onchanges
     @api.onchange('business_id')
-    def onchange_businessid_update_format(self):
+    def onchange_business_id_update_format(self):
         # Reformat business id from 12345671 to 1234567-1
         if isinstance(self.business_id, basestring) and re.match('^[0-9]{8}$', self.business_id):
             self.business_id = self.business_id[:7] + '-' + self.business_id[7:]
